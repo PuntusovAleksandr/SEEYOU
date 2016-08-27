@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.aleksandrp.seeyou.video_activity.VideoActivity"
+    tools:showIn="@layout/activity_video">
+
+    <RelativeLayout
+        android:id="@+id/rl_video_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_bg_green">
+
+        <RelativeLayout
+            android:id="@+id/rl_back_video_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/small_margin">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_left"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_back"
+                android:text="@string/back"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_video_activity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <VideoView
+                android:id="@+id/video_video_activity"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+            <RelativeLayout
+                android:id="@+id/ll_about_video_activity"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/video_video_activity"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                android:paddingRight="@dimen/com_facebook_auth_dialog_corner_radius_oversized">
+
+                <ImageView
+                    android:id="@+id/iv_icon_author"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@+id/iv_icon_author"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|start"
+                        android:text="name"
+                        android:textSize="@dimen/midle_size_text"/>
+
+                    <TextView
+                        android:id="@+id/tv_name_video_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|start"
+                        android:text="author"
+                        android:textSize="@dimen/normal_size_text"/>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/ib_show_details_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_down"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cardview_compat_inset_shadow"
+                android:background="@color/transparent_green"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/com_facebook_likeboxcountview_text_padding"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/views"
+                    android:textSize="@dimen/midle_size_text"/>
+
+                <TextView
+                    android:id="@+id/tv_views_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    android:text="Views"
+                    android:textSize="22sp"/>
+
+                <View
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                        android:layout_marginRight="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_show_like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/size_liks"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                            android:layout_marginRight="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                            android:src="@drawable/like"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_dislike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                        android:layout_marginRight="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                            android:layout_marginRight="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                            android:src="@drawable/dislike"/>
+
+                        <TextView
+                            android:id="@+id/tv_show_dislike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/size_liks"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cardview_compat_inset_shadow"
+                android:background="@color/transparent_green"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_description_club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/icon_club_full"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/icon_club_full"
+                    android:layout_margin="@dimen/com_facebook_likeboxcountview_text_padding"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/com_facebook_likeboxcountview_text_padding"
+                            android:gravity="start"
+                            android:text="@string/published"
+                            android:textSize="@dimen/small_size_text"/>
+
+                        <TextView
+                            android:id="@+id/tv_published_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/published"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tw__permission_description_text_size"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/com_facebook_likeboxcountview_text_padding"
+                            android:gravity="start"
+                            android:text="@string/category"
+                            android:textSize="@dimen/small_size_text"/>
+
+                        <TextView
+                            android:id="@+id/tv_category_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/category"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tw__permission_description_text_size"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cardview_compat_inset_shadow"
+                android:background="@color/transparent_green"/>
+
+            <include layout="@layout/fragment_tab_details_video"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cardview_compat_inset_shadow"
+                android:background="@color/transparent_green"/>
+
+            <include layout="@layout/fragment_comments_video"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

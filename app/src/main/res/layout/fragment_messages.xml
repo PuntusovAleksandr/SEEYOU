@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.aleksandrp.seeyou.message.fragment.MessagesFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_mess"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_bg_green">
+
+        <RelativeLayout
+            android:id="@+id/rl_back_mess"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/small_margin">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_left"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_back"
+                android:text="@string/back"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/messages"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/iv_user_two"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            android:layout_marginRight="@dimen/small_margin"
+            android:orientation="vertical"
+            android:src="@drawable/com_facebook_profile_picture_blank_portrait"
+            tools:background="@color/transparent_green"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_mess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_mess"
+        android:layout_above="@+id/rl_buttom_mess"/>
+
+
+    <LinearLayout
+        android:id="@+id/rl_buttom_mess"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent_green"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_send_mess"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:paddingBottom="@dimen/cardview_default_elevation"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/cardview_default_elevation"/>
+
+        <Button
+            android:id="@+id/bt_send_mess"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/cardview_dark_background"
+            android:text="@string/send"
+            android:textColor="@color/color_green"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

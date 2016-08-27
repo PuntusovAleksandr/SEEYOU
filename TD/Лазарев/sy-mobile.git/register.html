@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0; user-scalable=0; user-scalable=no">
+<title>Title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="style/ghost.css">
+<link rel="stylesheet" href="style/css.css">
+<link rel="shortcut icon" href="../favicon.ico">
+<script src="js/jquery-latest.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/storage.js"></script>
+	<script src="js/apiFunctions.js"></script>
+</head>
+<body onload="getCountries()">
+	<div class="header">
+		<div class="back-btn">
+			<button onclick="window.history.back();"><small>Back</small></button>
+		</div>
+		<div class="header-nav">
+			
+		</div>
+		<div class="title">
+			Registration
+		</div>
+	</div>
+
+	<div class="registration-box">
+		<h2 class="t-center">Sign up via social network</h2>
+		<p class="t-center t-small">
+			Your friends will not know that you are logged in SeeYou
+			We do not publish any information in your social network
+		</p>
+		<div class="social-btns">
+			<a href="videoselfie.html"><img src="images/icon-facebook.png"></a>
+			<a href="videoselfie.html"><img src="images/icon-google_plus.png"></a>
+			<a href="videoselfie.html"><img src="images/icon-twitter.png"></a>
+		</div>
+		<br>
+		<p class="t-center t-small">
+			The next time you enter the site, use the login via the selected social network
+		</p>
+		<hr style="margin: 24px -24px; border-color: #ddd;">
+		<h2 class="t-center">Registration via mail</h2>
+		<form class="register">
+			<div class="nopad">
+				<p>
+					<input name="name" type="text" placeholder="Name" autofocus>
+					<input name="surname" type="text" placeholder="Surname">
+					<input name="email" class="email" type="email" placeholder="Email">
+					<input name="password" class="password" type="password" placeholder="Create password">
+				</p>
+				<p class="overflow: hidden">
+					Birthday
+					<input type="hidden" class="birthDate" name="birthDate" value="">
+					<br>
+					<select class="birth-day" style="width: 20%; margin-right: 5px">
+						<option value="">Date</option>
+						<option value="01">1</option>
+						<option value="02">2</option>
+						<option value="03">3</option>
+						<option value="04">4</option>
+						<option value="05">5</option>
+						<option value="06">6</option>
+						<option value="07">7</option>
+						<option value="08">8</option>
+						<option value="09">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+					</select>
+					<select class="birth-month" style="width: 40%; margin-right: 5px">
+						<option value="">Month</option>
+						<option value="01">January</option>
+						<option value="02">February</option>
+						<option value="03">March</option>
+						<option value="04">April</option>
+						<option value="05">May</option>
+						<option value="06">June</option>
+						<option value="07">July</option>
+						<option value="08">August</option>
+						<option value="09">September</option>
+						<option value="10">October</option>
+						<option value="11">November</option>
+						<option value="12">December</option>
+					</select>
+					<select class="birth-year" style="width: 30%;">
+						<option value="">Year</option>
+						<option value="1960">60</option>
+						<option value="1961">61</option>
+						<option value="1962">62</option>
+						<option value="1963">63</option>
+						<option value="1964">64</option>
+						<option value="1965">65</option>
+						<option value="1966">66</option>
+						<option value="1967">67</option>
+						<option value="1968">68</option>
+						<option value="1969">69</option>
+						<option value="1970">70</option>
+						<option value="1971">71</option>
+						<option value="1972">72</option>
+						<option value="1973">73</option>
+						<option value="1974">74</option>
+						<option value="1975">75</option>
+						<option value="1976">76</option>
+						<option value="1977">77</option>
+						<option value="1978">78</option>
+						<option value="1979">79</option>
+						<option value="1980">80</option>
+						<option value="1981">81</option>
+						<option value="1982">82</option>
+						<option value="1983">83</option>
+						<option value="1984">84</option>
+						<option value="1985">85</option>
+						<option value="1986">86</option>
+						<option value="1987">87</option>
+						<option value="1988">88</option>
+						<option value="1989">89</option>
+						<option value="1990">90</option>
+						<option value="1991">91</option>
+						<option value="1992">92</option>
+						<option value="1993">93</option>
+						<option value="1994">94</option>
+						<option value="1995">95</option>
+						<option value="1996">96</option>
+						<option value="1997">97</option>
+						<option value="1998">98</option>
+						<option value="1999">99</option>
+						<option value="2000">00</option>
+					</select>
+				</p>
+				<p>
+					County
+					<br>
+					<select class="countrySelect" name="countryId" style="width: 100%;">
+						<option value="">Select Country</option>
+					</select>
+				</p>
+				<p>
+					Sity
+					<br>
+					<select class="citySelect" name="cityId" style="width: 100%;">
+						<option value="">Select city</option>
+					</select>
+				</p>
+				<p>
+					Sex
+					<br>
+					<label><input value="male" type="radio" name="sex">Male</label>
+					&emsp;
+					<label><input value="female" type="radio" name="sex">Female</label>
+				</p>
+				<hr>
+				<p class="t-center">
+					<br>
+					<label class="t-gray4"><input type="checkbox" name="terms">I agree to SeeYou's <a href="terms_of_use.html">Terms of Use</a></label>
+				</p>
+				<p class="t-center">
+					<button class="green-btn btn-big register">Registration</button>
+				</p>
+				<p class="t-center responseMsgContainer msgRegister">
+
+				</p>
+			
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>

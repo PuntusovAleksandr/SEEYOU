@@ -1,0 +1,647 @@
+<resources>
+    <string name="facebook_app_id">1555154554779605</string>
+
+
+    <string name="app_name">SEEYOU</string>
+    <string name="registration">REGISTRATION</string>
+    <string name="sign_in_via_social_account">Sign in via social account</string>
+    <string name="or_via_email">or via email</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="title_activity_refistering">RefisteringActivity</string>
+    <string name="back">Back</string>
+    <string name="video_selfie">VIDEOSELFIE</string>
+    <string name="broadcasts">BROADCASTS</string>
+    <string name="adoult_only">ADULT ONLY</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="by">by\t</string>
+    <string name="views">Views\t</string>
+    <string name="live_chanels">Live chanels</string>
+    <string name="humor">Humor</string>
+    <string name="policy">Policy</string>
+    <string name="sport">Sport</string>
+    <string name="family_children"><![CDATA[Family & Children]]></string>
+    <string name="animals">Animals</string>
+    <string name="art">Art</string>
+    <string name="music">Music</string>
+    <string name="style">Style</string>
+    <string name="news">News</string>
+    <string name="science">Science</string>
+    <string name="places_trawel"><![CDATA[Places & Trawel]]></string>
+    <string name="your_liked_videos">Your liked videos</string>
+    <string name="upload_video">Upload video</string>
+    <string name="select_file_to_upload">Select file to upload</string>
+    <string name="type_title_of_video">Type title of video</string>
+    <string name="description_for_video">Description for video</string>
+    <string name="video_category">Video category</string>
+    <string name="select_category">Select category</string>
+    <string name="sms_notification">SMS Notification</string>
+    <string name="phone_number">Phone number</string>
+    <string name="i_agree_to_seeyou_sterms_of_use">I agree to SeeYou\'sTerms of Use</string>
+    <string name="upload_video_bt">UPLOAD VIDEO</string>
+    <string name="sign_up_via_social_network">Sign up via social network</string>
+    <string name="n_nyour_friends_will_not">\n\nYour friends will not know that yuo are logged in SeeYou. We do not publish any information in you social network</string>
+    <string name="the_next_time_you">The next time you enter the site, use the login we the selected social network</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="create_password">Create password</string>
+    <string name="user_name">User name</string>
+    <string name="insaider">Insaider</string>
+    <string name="message">Notifications</string>
+    <string name="my_profile">My profile</string>
+    <string name="about_seeyou">About SeeYou</string>
+    <string name="sign_out">Sign out</string>
+    <string name="fill_title">Fill title</string>
+    <string name="fill_path">Select file please</string>
+    <string name="fill_description">Fill description</string>
+    <string name="fill_category">Select category</string>
+    <string name="fill_phone">Fill phone number</string>
+    <string name="fill_agree">You need agree</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="sex">Sex</string>
+    <string name="select_country">Select country</string>
+    <string name="select_city">Select city</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="update">Update</string>
+    <string name="cancel">CANCEL</string>
+    <string name="select_date">Select date</string>
+    <string name="edit">Edit</string>
+    <string name="date">Date</string>
+    <string name="ok">Ok</string>
+    <string name="title_activity_example">EXAMPLE</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="contacts">Contacts</string>
+    <string name="cooperation">Cooperation</string>
+    <string name="about">About</string>
+    <string name="terms_of_use">Terms of use</string>
+    <string name="confidentiality">Confidentiality</string>
+    <string name="help">Help</string>
+
+
+
+
+    <string name="description_contacts">" “SeeYou” is a unique online source for entertaining events and places promotion. The users of our portal choose where, how and with whom they spend their leisure time."
+        "\n"
+        "    This video source is created for people who want to be in the spotlight, want to expand their opportunities, people who are not afraid of being heard and seen. Places where TV can’t be reached and social networks access is limited, there works “SeeYou”.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Help\n"
+        "\n"
+        "   If you need any help click this link to open our Information center. There you can find answers to FAQ concerning the website and mobile applications, such as personal account creation, problems with watching channels, videos uploading etc. \n"
+        "\n"
+        "   If you have some difficulties or find a bug on the website/mobile application, please contact to us via: developers@seeyou.media. We are persistently working on the website and mobile application optimization!\n"
+        "\n"
+        " \n"
+        "\n"
+        "Media contacts\n"
+        "\n"
+        "   We encourage the Press and Media to contact “SeeYou” directly via: contacts@seeyou.media\n"
+        "\n"
+        " \n"
+        "\n"
+        "Additional contacts\n"
+        "\n"
+        " \n"
+        "\n"
+        "Contacts mails:\n"
+        "\n"
+        "contacts@seeyou.media (contacts),\n"
+        "\n"
+        "developers@seeyou.media (developers),\n"
+        "\n"
+        "info@seeyou.media (general questions)."</string>
+    <string name="description_about">"Life of a modern person divides into offline and online mode. And often people spend online even more time: they meet, communicate and work on the Internet; in short, they live on the Internet. And among the plenty of various entertaining and informational sources, social networks and forums, there is a question: can be there created something new?
+"
+            "\n"
+            "   Every Internet source has its own advantages, however it does not satisfy all the user’s needs simultaneously, especially if it is about spending leisure time and entertainment, and also about opportunities of a personal self-realization within one portal.\n" +
+            "\n"
+            "   There are innumerable places of entertainment in our world, but choosing a proper one to have a good rest is not always a simple task. We feel the lack of information and rating so we can’t make a choice at home through an online resource. Forums and social networks where users share their opinions can’t always be objective, because tastes differ. A direct TV and Internet advertisement tends to prettify and color the truth, so it is not the thing to rely on.  \n"
+            "\n"
+            "   In the galloping rhythm of life, where every our decision is forcible, it is more and more difficult to make a right choice, to express an individual point of view, to be yourself and to enjoy your personal freedom and to choose where, how and with whom spend your leisure time. Freedom of self-realization is an important part of a modern society!    Unfortunately before it couldn’t find a full and exact expression neither offline, nor online.\n"
+            "\n"
+            "   Our “SeeYou” team decided to fill the gap in and create a unique video-guide to provide people with an effective communicative platform for self-realization. We want our users to be heard and seen, we want them to be free in their activity and the most significant thing is that we want them to have the right to choose.\n"
+            "\n"
+            "   In fact we combined some advantages of the popular Internet sources and social networks, added our individual engineering features and got an out-and-outer source called “SeeYou”.\n"
+            "\n"
+            "   Why “SeeYou”? The name came by itself, according to the working philosophy of our portal. While developing the portal, our main idea was to find the way how our users’ videos can be watched by all the people in real time, but not just liked only by limited number of friends as in the social networks and get lost in a day or two. So we have developed a system of direct webcasts, which allows watching videos of each our user. And it is our basic distinguishing concept – to see everyone, to see you – “SeeYou”.\n"
+            "\n"
+            "   Online media and entertainment sphere research results show that the Internet users need an effective source helping to choose a proper entertainment and also can provide users with a possibility to communicate, to find new friends and to put one's best foot forward. And in their turn entertaining places need a good promotion. So why can’t they meet here, on our portal?\n"
+            "\n"
+            "   “SeeYou” have two main lines: entertaining and informational. The first is aimed on the effective spending of leisure time, the second one creates conditions for individual self-realization.\n"
+            "\n"
+            "   With a help of “SeeYou” nightclubs, pubs, banquet halls introduce themselves by webcasting their events, posting their promoting information including advertising actions, contests, prizes drawings to encourage the users to choose the best place for spending their free time. Every entertaining place becomes something like a TV channel with its own entertainment program. Obviously, that it brings many conveniences for users who want to get full information about the place without wasting time, searching for it on the boundless World Wide Web.\n"
+            "\n"
+            "   All the “SeeYou” system is built on the handling of photo/video files to prepare them for the oncoming webcast both live and in record. To this effect we adjust high-dimensional cameras at different entertaining places and produce live webcast of the events going on.\n"
+            "\n"
+            "   Especially for our users we have created an effective networking allowing people not just watching some events going on, but finding their friends attending them in the real time. So every “SeeYou” user getting online at home can know who is visiting this or that nightclub right now and see its real rating. Owners of the entertaining places can also get information about their target audience and level of attendance.\n"
+            "\n"
+            "   One more feature of  “SeeYou” project is a special social networking function for people to get aquatinted. It is well-known that entertaining events bring nice opportunities to meet some new friends. But a lot of young people feel shy to come up to another person and start a conversation. They are afraid of being misunderstood and just can’t talk to a person they like. And who knows maybe they lose their chance to meet a true love?\n"
+            "\n"
+            "   We have solved this problem and set up an online chat, due to it the first meeting can be done very simply with a help of Emoticons. For example a guy likes a girl at the nightclub, but he feels embarrassed to communicate with her. If they both are the users of “SeeYou”, the young man can send an Emoticon with a proposal about getting aquatinted to her mobile device. If the girl accepts his proposal, she can answer him with the same Emoticon and they two can continue their conversation in the chat or stop it with the function of blocking. If this conversation has started successfully, the young man can move to direct meeting without any doubt. He is sure, that he is welcomed and the girl will talk to him with pleasure.\n"
+            "\n"
+            "   Online chat is not limited by communication within the only one location. Users can keep in touch attending different nightclubs or events.\n"
+            "\n"
+            "   Except the nightlife entertaining places, “SeeYou” can produce webcasts from banquet halls. Now weddings, anniversaries, birthdays can be watched both online and in record. And if it is necessary the video file can be downloaded and saved as a remembrance. In this way relatives and friends who can’t attend the event will be able to see it even being thousands of miles away and can leave their congratulations through our portal.\n"
+            "\n"
+            "   Additionally the portal “SeeYou” produces webcasts of various significant concerts, festivals and competitions. Those users, who can’t attend the events, have an excellent opportunity to watch them on our source with their family and friends. Not everyone can afford going to the concerts of world popular stars, and as a rule not all of the concerts are broadcasted on TV, and even on the Internet we can find just some cut versions. But on our source visitors can enjoy watching them in record.\n"
+            "\n"
+            "   We did not pass young fans of online games over. Every entertaining place gives an opportunity to take part in its own online game: to put together a jigsaw puzzle with some nightclub’s name or with a name of the oncoming party and to get some discounts or invitation cards as a prize. Places of entertainment attract visitors, and our users use the time to their advantage.\n"
+            "\n"
+            "   The portal “SeeYou” presents Adult Entertainment system with limited access for a fee, which provides users with live webcasts from strip bars and clubs and also is attached by virtual dating function. For this service users should register separately. In online chat a visitor has his/her own nickname and uses any kind of photos.\n"
+            "\n"
+            "   Informational content of the portal is formed by a system of Videoselfies – this is a system of public opinion, which doesn’t limit users in their freedom of expression and can touch every sphere of life (except of forbidden by law). It is a platform for active goal-seeking people of every age which gives an opportunity to be heard and seen.\n"
+            "\n"
+            "   Every “SeeYou” user can shoot interesting events at the camera and post them on the site. Usually each video is within one minute and is differentiated by a category for example Humor, Self-promotion, Critics, Comments and Announcements. For a convenience video files can be also differentiated by geographical location. A user who has posted his/her video on our site receives a message containing time of its public broadcast to his/her user profile.   \n"
+            "\n"
+            "   Videoselfie is a wonderful platform as for a personal self-realization as for a group of people connected together with one idea or a common cause. Due to Videoselfie people can have an influence on formation of public opinion, demonstrate their talents and skills. In short, they make their own television, which doesn’t limit them in choosing subjects and ways of self-expression. It’s a real freedom of mind, freedom of speech, freedom of life!\n"
+            "\n"
+            "   Everyone who has become a witness of some extraordinary event in his city or just wants to express his/her opinion concerning a topical question can shoot a Video Selfie which will be seen by a great number of people. For example an official has abused the authority, somebody needs money for a surgery, or you want to demonstrate an outstanding talent of your child – on our portal every story will have its response. It will be watched and appreciated by people throughout the country. And maybe owning to “SeeYou” you will find somebody who will support you and share your ideas.\n"
+            "\n"
+            "   Thus, having combined entertaining and informative value, we created a unique helpful source for our young people to make their life more interesting and to create conditions for absolute freedom of choice.\n"
+            "\n"
+            "   “SeeYou” is a portal for people who want to be in the spotlight, who think they should be heard and seen and who are not afraid of expressing themselves and can exceed the forced limits.\n"
+            "\n"
+            "   Our mission is to provide each user with a free unprejudiced choice. And our aim is to present an effective source useful for a personal self-realization and for organizing leisure time activity."</string>
+    <string name="description_confidentiality">"   All translated versions of legally binding agreements and policies are presented only for convenience and for facilitating reading and understanding the Russian language version of the Terms. Furthermore, in case of a dispute or a conflict concerning legally binding agreements and policies, the Russian language version of the Terms governs contractual relationship and has primacy over the versions in other languages.\n"
+        "\n"
+        "PRIVACY POLICY\n"
+        "\n"
+        "July 14, 2015\n"
+        "\n"
+        " \n"
+        "\n"
+        "SeeYou takes your privacy seriously.\n"
+        "\n"
+        "   This Privacy Policy is intended to demonstrate SeeYou’s commitment to providing open and transparent privacy policies and practices to help inform our users and the public about how we may collect, use, or disclose the personal information they choose to share with us and also how our users can access this information and change it.\n"
+        "\n"
+        "   Except of the cases specified in this Privacy Policy, we will not share your personal information with third parties without your voluntary and clear permission.\n"
+        "\n"
+        " \n"
+        "\n"
+        "   How we use information that we collect\n"
+        "\n"
+        "   While registering on the Site or its mobile application you fill in the fields with your contact details (including first name, last name, e-mail address, date of birth), this is done for you to request for information and support or just to make suggestions concerning the work of the Site. For some services we also can ask your credit card number, ID card number or other financial details to set up your personal account number.\n"
+        "\n"
+        "   We collect and save all the information you share with us through the Site, mobile application or by any other means, including e-mail correspondence, telephone contacts or communications to our clients support department. If you make a request for help we will keep a record about the service you are rendered.\n"
+        "\n"
+        "   We use your information to contact you about upcoming changes of the Site and mobile applications systems functioning, “SeeYou” new services and new offers if we consider them to be material and interesting for you. In case you want to limit these notifications you can manage your settings as it is specified in the “Changes of my information” section below.\n"
+        "\n"
+        " “SeeYou” works with third parties so we may use your information for developing joint proposals with our partners and/or affiliated persons. If we collect information from you connected with a particular joint proposal, it will be clarified who collects the information and what privacy statement is applicable.\n"
+        "\n"
+        "   We use the information obtained from you through our Site and its mobile application statistics (for example your IP-address, or operating system of your device) for troubleshooting our server problems and effective managing our Site and its mobile application. We also extract various demographic data to improve our Site and its mobile application and make your surfing more convenient and pleasant. This data is not connected with your identifiable personal information except of cases when it is necessary to prevent fraud and improper use of the Site. \n"
+        "\n"
+        "   On our Site and its mobile application we use cookies. The cookie will help to recognize your device the next time you visit our Site or its mobile application. Cookies are placed on your customer number, which is connected with your profile. \n"
+        "\n"
+        "   On our Site and its mobile application we also use tracking systems, ISC (tracking of source). Our mobile application automatically collects such information as an operating system of device, model of hand phone, version of application, identifier of device and a customer number of user. We send these data back to “SeeYou” web-services.\n"
+        "\n"
+        "   Your data is not transmitted to third parties, under any circumstances, except as related to the execution of the law.\n"
+        "\n"
+        "   We request for accessing and monitoring your geographical location data from your mobile device. This is necessary for qualitative work of our systems.\n"
+        "\n"
+        "   This Site and our mobile application contain links to other websites. Unfortunately, \"SeeYou\" is not responsible for the privacy practices or content of those sites.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Security\n"
+        "\n"
+        "   This Site implements protection against loss, improper use or alteration of information being under our control. When you enter confidential information (such as a credit card number) in some services of the system, we encrypt the transmission channel of the data using the SSL technology.\n"
+        "\n"
+        "   We comply with generally accepted standards for the protection of personal information submitted to us both during transmission and after receiving. However, there are no methods of transmitting data over the Internet, and no methods of electronic storage which can be protected 100%. Therefore, we cannot guarantee an absolute security.\n"
+        "\n"
+        " \n"
+        "\n"
+        "E-mail Correspondence\n"
+        "\n"
+        "   We use e-mails to communicate with you, confirm your registration, send the information you requested. We also provide e-mail links, as in \"Contact\" page, which allow you to contact us directly. We try to respond to your messages immediately.\n"
+        "\n"
+        "   The information sent by you to us may be stored and used to improve the Site, our mobile applications and our products, or they can be viewed and deleted.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Third party providers\n"
+        "\n"
+        "   Sometimes we can provide information about you to third parties who provide on our behalf particular services, such as processing credit card payments, competitions and surveys, analysis of our systems or of the demographic distribution of customers. We provide only the information necessary for a third party to provide the requested service. These companies are prohibited to store, transmit to others or use your personal information for any other purposes.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Additional Information\n"
+        "\n"
+        "   To provide you with certain services, we may sometimes complement the personal information that you submit to us with information obtained from other sources (for example, information from our strategic partners and service providers. We do this for enhancing capacity in delivering services to you.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Contests / Surveys\n"
+        "\n"
+        "   Sometimes we can provide you with the opportunity to participate in contests and surveys. If you choose to participate in them, we may ask you some personal information. Participation in these surveys or contests is completely voluntary, so you can decide whether to disclose the requested information. Usually it is requested following information: contact details (such as name and address) and demographic information (such as zip code and age group. Note please: to participate in these activities you must be at least 18 years old). We use this information to notify contest winners and award prizes, monitor website traffic and to personalize our Site.\n"
+        "\n"
+        "   We may use third party service provider to conduct these surveys or contests. In this case, such a company will be prohibited from using personal information of our customers for any other purpose. We will not share personal information that you specify during the contests or surveys to third parties, without giving you a preliminary notice and appropriate choice.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Targeted Advertising\n"
+        "\n"
+        "   “SeeYou” can display targeted offers to our customers, depending on the services being developed at the moment. These proposals will be displayed in the form of changing services banners. Displaying the banners we do not collect any personal information or location-based data to generate a profile of your actions, which would be transferred to third party advertising companies.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Share with Friend\n"
+        "\n"
+        "   If a user decides to use our referral service to tell a friend about our Site or mobile application, we ask the user for the friend's name and e-mail address. \"SeeYou\" automatically sends to an addressee an e-mail with an invitation to visit our website. We keep this information solely to send this single e-mail. The friend may contact us via contacts@seeyou.media, to request removal of this information from our database.\n"
+        "\n"
+        " \n"
+        "\n"
+        "What will happen to my personal information when my personal profile is deleted?\n"
+        "\n"
+        "   If you delete your account (intentionally or accidentally), all of your personal information goes to \"deactivated\" in our databases. However, the deactivation of your account does not mean that your personal information is completely removed from our database. We will keep it and, if necessary, we will use your personal information to fulfill our legal obligations, settle disputes or enforce our previous agreements.\n"
+        "\n"+
+        " \n"
+        "\n"
+        "Update Your Information\n"
+        "\n"
+        "   You can always edit, update or deactivate your profile information or refuse to receive messages from us and our partners. We have the following options to modify your profile information or contact information.\n"
+        "\n"
+        "   You can send e-mail to contacts@seeyou.media.\n"
+        "\n"
+        "   You can access your Profile - Your personal Office anytime.\n"
+        "\n"
+        "   We will respond to your request for access or modify or delete your information within thirty (30) days.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Transfer to Other Countries\n"
+        "\n"
+        "   If you visit this site, in a country other than the one where our servers are located, within correspondence with us data can be transmitted across national borders. Visiting this Site and exchanging data with us electronically, you consent to perform such transfer.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Compliance with Laws and Their Enforcement\n"
+        "\n"
+        "   We cooperate with the government and representatives of law-enforcement agencies and individuals in order to comply with the laws and their enforcement. We disclose information about you to government or law-enforcement officials and private individuals, if in our sole discretion consider it necessary or appropriate to respond to claims and litigation (including, but not limited to subpoenas in court), for the protection of our property rights and or property and the rights of third parties, for public or personal safety, or to prevent or stop activities that we believe is unethical or illegal. We will also disclose your information as necessary to comply with the rules, regulations and policies ICANN.\n"
+        "\n"
+        "   To the extent permitted by law, we will take reasonable steps to notify you if arises a need to provide your personal information to third parties as part of the trial.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Changes in Our Practices\n"
+        "\n"
+        "   Occasionally we may, in our discretion, make changes to the Privacy Policy. When we make changes to the Privacy Policy, we’ll notify you through the Privacy Policy hereof and other places we consider to be necessary, letting you know the kind of data we collect and the further data handling conditions, so that you are always aware of what we do with your information. If we consider the changes material, we will inform you here on the Site, or by sending an e-mail message or by a notification on our Homepage.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Contact Details\n"
+        "\n"
+        "   If you have some questions concerning our Privacy Policy, functioning of the Site or our mobile application or your operations with the Site or our mobile application please contact us via contacts@seeyou.media.\n"
+        "\n"
+        "\n"
+        "© 2016 Seeyou, LLC"</string>
+    <string name="description_cooperation">"Согласно прогнозам уже к 2017 году Интернет станет крупнейшим медиаканалом для трети мирового рынка! А сфера развлечений с каждым годом будет расти более чем на 5%. По исследованиям аудиторской четверки трансляции мероприятий будут привлекать массовую аудиторию, создавая эффект живого присутствия.  «SeeYou» - это новый формат бизнес-реальности в мире развлечений. http://46.116.26.156:8081/login.asp"</string>
+    <string name="description_help">" "What are my benefits as a registered user?\n"
+            "\n"
+            "Registered users have the following advantages:\n"
+            "\n"
+            "Upload video reports (selfie) to the site.\n"
+            "Play interactive games and win prizes from the owners of entertaining places.\n"
+            "Comment video channels and video reports of other users.\n"
+            "Have your personal user profile:\n"
+            "View and edit your profile. \n"
+            "Manage your uploaded video reports.\n"
+            "Receive notifications and view uploaded videos reports (selfie).\n"
+            "Receive (optional) notifications of promotions, contests and other attractions held by \n"
+            "the site administration and owners of entertaining places.\n"
+            " \n"
+            "\n"
+            "To the beginning of the section\n"
+            "\n"
+            " \n"
+            "\n"
+            "How to register on the site?\n"
+            "\n"
+            "   To register on the site follow this link. On the registration page, fill in the following fields: \"Name\", \"Last Name\", \"E-mailing address\" - your username on the site, \"Password\", \"Birthday\", \"Country\" and \"Gender\". Please confirm that you agree with the \"Terms of Service\" and then click \"Register.\"\n"
+            "\n"
+            "   Then, in automatic mode at the mailing address you will get a letter to confirm your registration. In the letter you will find a link, please click on the link and confirm your registration. Registration is completed and you can use all functions of the site.\n"
+            "\n"
+            "   You can also use the registration with one of the social networks where you have a personal profile. In this case, you do not need to fill in the registration form and your account on our website will be identical (username) with the social network that you have chosen.\n"
+            "\n"
+            " \n"
+            "\n"
+            "To the beginning of the section\n"
+            "\n"
+            " \n"
+            "\n"
+            "Can I have more than one profile on the site?\n"
+            "\n"
+            "   Yes, you can have more than one profile on the site. Your account is linked to the e-mail address specified by you when registering on the site or its mobile applications for Android / iPhone. If it is necessary, you can have an extra account. To do this, you must attach it to another e-mail address. \n"
+            "\n"
+            " \n"
+            "\n"
+            "To the beginning of the section\n"
+            "\n"
+            " \n"
+            "\n"
+            "What is “Videoselfie”?\n"
+            "\n"
+            "   Videoselfie system is a forum of live webcasts, a platform for people connected together with one idea, social projects and for personal self-realization.\n"
+            "\n"
+            "   Videoselfies doesn’t limit users in their freedom of expression and can touch every sphere of life (except of forbidden by law). It is a platform for active goal-seeking people of every age and status which gives an opportunity to be heard and seen.\n"
+            "\n"
+            "   Every “SeeYou” user who has become a witness of an interesting event can shoot it at the camera and post it on the site. Usually each video is within one minute and differentiated by categories for example Humor, Animals, Critics, and Sports etc. \n"
+            "\n"
+            "   \"Videoselfie\" webcast channel is maintained due to uploaded video reports. You create your television, and become its co-author. \n"
+            "\n"
+            "   When the number of video reports grows, for your convenient watching, the system adds a number of webcasting channels functioning in the country. The division of the webcasting channels is as follows: three regional channels turn on: \"Southern Region\", \"Central Region\", \"Northern Region\", and subsequently further channels division is made in the cities. \n"
+            "\n"
+            "Videoselfie is implemented as follows: \n"
+            "\n"
+            "You create a video report with the help of a mobile phone or other device.\n"
+            "Video report is uploaded on the source.\n"
+            "The uploaded video must pass moderation control.\n"
+            "Video report is transmitted to the webcasting stream rotating along with videos of other users. \n"
+            " \n"
+            "\n"
+            "To the beginning of the section\n"
+            "\n"
+            " \n"
+            "\n"
+            "Why is my account blocked?\n"
+            "\n"
+            "   Note please! The administration of the site reserves the right to block video reports, meaningless comments, containing spam or similar stuff or absolutely not related to the channel discussed. Also users participating in the ranking cheat and violating the Terms of Service can be blocked. In case of multiply violations of these provisions users and their profiles will be deleted. You can get acquainted with the Terms of Service here and Privacy Policy here. \n"
+            "\n"
+            "   If your page has been blocked, you can contact us here if you think this is a mistake.\n"
+            "\n"
+            " \n"
+            "\n"
+            "To the beginning of the section\n"
+            "\n"
+            " \n"
+            "\n"
+            "Comments\n"
+            "\n"
+            " To leave a comment, you must be registered on the site. Comments on our site are moderated. This means that a comment you post may be removed. We can remove the meaningless comments, containing spam and similar stuff, or absolutely not related to the channel discussed, or comments aimed at injuring human dignity. This is specified in detail here.\n"
+            "\n"
+            " \n"
+            "\n"
+            "To the beginning of the section\n"
+            "\n"
+            " \n"
+            "\n"
+            "Why webcasting channels freeze up?\n"
+            "\n"
+            "   Unfortunately, today the technology of TV watching on the Internet (OTT) is such that there pictures may freeze up. There is a number of reasons, but mostly it is because of the insufficiently stable bandwidth of Internet connection.\n"
+            "\n"
+            "   A partial solution to this problem is buffering broadcast (making a short delay in the broadcast while which the necessary information (the data stream) is stored in the buffer memory on the server), and after a short delay, you see a smoother picture.\n"
+            "\n"
+            "   Very often the problems on the Internet channels are temporary (webcast brakes, for example, for a few minutes but after it all normalizes). \n"
+            "\n"
+            "   In this case, you just should have a little patience and wait.Sometimes, there is a very large load on the webcasting server (usually this happens when some major or important events take place or in the most peak hours), which can theoretically slow down the channels. But this happens very seldom, and when some important events are going on we are always add server capacity and in the peak hours (for example, Friday night) we have a good margin of safety.\n"
+            "\n"
+            " \n"
+            "\n"
+            "To the beginning of the section \n"
+            "\n"
+            " \n"
+            "\n"
+            "Virtual dating system “Where Are You”\n"
+            "\n"
+            "How does it work? \n"
+            "\n"
+            "   We wanted to help our users to get acquainted and set up an online chat, due to it the first meeting can be done very simply with a help of Emoticons.\n"
+            "\n"
+            "For example a guy likes a girl at the nightclub, but he feels embarrassed to communicate with her. If they both are the users of “SeeYou”, the young man can send an Emoticon with a proposal about getting aquatinted to her mobile device. If the girl accepts his proposal, she can answer him with the same Emoticon and they two can continue their conversation in the chat or stop it with the function of blocking. If this conversation has started successfully, the young man can move to direct meeting without any doubt. He is sure, that he is welcomed and the girl will talk to him with pleasure. \n"
+            "\n"
+            " \n"
+            "\n"
+            "Online chat is not limited by communication within the only one location. Users can keep in touch attending different nightclubs or events. \n"
+            "\n"
+            "When does it work?\n"
+            "\n"
+            " Virtual dating service operates only during entertaining places working hours. But communication can be continued after.\n"
+            "\n"
+            "Limitations\n"
+            "\n"
+            "Currently the virtual dating services is not available to users on the website, and function only with the applications for Android and iPhone.\n"
+            "\n"
+            " \n"
+            "\n"
+            "To the beginning of the section \n"
+            "\n"
+            " \n"
+            "\n"
+            "How does Jigsaw puzzle work?\n"
+            "\n"
+            "We did not pass young fans of online games over. Every entertaining place gives an opportunity to take part in its own online game: to put together a jigsaw puzzle with some nightclub’s name or with a name of the oncoming party and to get some discounts or invitation cards as a prize. Places of entertainment attract visitors, and our users use the time to their advantage. \n"
+            "\n"
+            "Each entertaining place can make a promotional announcement, flyer, provided by the owner of the place. Upon successful completion of the game, when a puzzle is put up, the system automatically sends a notification for receiving the prize to the personal profile of the user.\n"
+            "\n"
+            "Visiting this event, the user shows this notification and receives a prize.\n"
+            "\n"
+            "When does it work?\n"
+            "\n"
+            " Owners of entertaining places post promotional announcements on the page of their entertaining places in the form of flyers before the event, some promotions are limited by the number of prizes, so that the successful completion of the game (putting up a promotional flyer), is also a lottery which win the first and the more lucky ones. Good luck!\n"
+            "\n"
+            "Limitations\n"
+            "\n"
+            "Play the game “Jigsaw puzzle” can only registered users.\n"
+            "We do not set limitations on the prizes. It is the prerogative of the events’ organizers.\n"
+            " \n"
+            "\n"
+            " To the beginning of the section \n"
+            "\n"
+            " \n"
+            "\n"
+            "I forgot my password!\n"
+            "\n"
+            "   If you have forgotten your password to your account, which is used to log in our site and/or application, you can use the form to restore the password. A new password will be sent to your e-mail.\n"
+            "\n"
+            " \n"
+            "\n"
+            "To the beginning of the section\n"
+            "\n"
+            " \n"
+            "\n"
+            "I forgot my e-mail!\n"
+            "\n"
+            "   If you do not remember the e-mail address attached to your account, you have to click this link and you will be asked some questions related to the account. If the answers are satisfactory, proving that it is really you, an e-mail will be sent to your new address.\n"
+            "\n"
+            " \n"
+            "\n"
+            "To the beginning of the section\n"
+            "\n"
+            " \n"
+            "\n"
+            "How to add a video you liked to \"Favorites\"?\n"
+            "\n"
+            "   On the site you can add any liked videos in the \"Favorites\" of the \"Liked videos\" category, pressing the \"Like\" button. If, on the other hand you want to remove the video from the \"Favorites\", press the \"Dislike\" button.\n"
+            "\n"
+            " \n"
+            "\n"
+            "To the beginning of the section\n"
+            "\n"
+            " \n"
+            "\n"
+            "Adult Entertainment system\n"
+            "\n"
+            "   The portal “SeeYou” presents Adult Entertainment system with limited access for a fee, which provides users with live webcasts from strip bars and clubs and also is attached by virtual dating function. For this service users should register separately. In online chat a visitor has his/her own nickname and uses any kind of photos. ""</string>
+    <string name="description_terms">"July 14, 2015
+"
+        "\n"
+        "Warning!\n"
+        "\n"
+        "   All the channels built-in video players, web cameras presented on the site “SeeYou” are exceptionally for user's acquaintance. All the sources of webcasts (links to video streams) are absolutely open and legal.\n"
+        "\n"
+        "Attention! Age requirement: 18+. The information on the site may not be appropriate for all audiences. If you don’t agree with these Terms, then please don’t use the Site.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Terms of Service\n"
+        "\n"
+        "1. Introductions\n"
+        "\n"
+        "1.1. The Administration of the site (“Administration”, “We”, “Our”, “Us”) offers using the site SeeYou (herein referred to as “SeeYou” or the “Site”) and its services to the Internet user (“You” or “User”) conditional on the User’s acceptance of the Terms of Service set forth below (the “Terms of Service”, “Terms”) and our Privacy Policy. The agreement between the Site and the User shall enter into force upon acceptance by User all the Terms of Service parts, as described in the Terms clause 1.3.\n"
+        "\n"
+        "1.2. Occasionally we may, in our discretion, make changes to the Privacy Policy and Terms. When we make changes to the Privacy Policy, we’ll notify you through the Privacy Policy clause hereof and other places we consider to be necessary, letting you know the kind of data we collect and the further data handling conditions, so that you are always aware of what we do with your information. If we consider the changes material, we will inform you here on the Site, or by sending an e-mail message or by a notification on our Homepage.\n"
+        "\n"
+        "1.3. When starting using the Site services or by completing the registration process, you hereby agree that you are bound by the Terms of Service in full without any reservation and exception. If you do not agree to these Terms, you should not access this Site. In the case the Administration has brought some changes into the Terms of Service by means specified in the Terms clause 1.2 and the User does not agree with the changes, the User should stop using the Site services.\n"
+        "\n"
+        " \n"
+        "\n"
+        "2. Registration Conditions. User Personal Profile.\n"
+        "\n"
+        "2.1. Account registration and verification is required in order to use some functions of the Site, after registration each user is provided with a unique personal profile.\n"
+        "\n"
+        "2.2. While registering on our Site and its mobile application you fill the forms with your contact details (including your first and last names, e-mail address, and date of birth).\n"
+        "\n"
+        "2.3. User Personal information, which is recorded in User personal profile is saved and handled by Administration according to the Privacy Policy.\n"
+        "\n"
+        "2.4. Username and password for access to the User profile. While registering, the User chooses a username (a unique name of the User profile containing Latin characters and digits) and a password for entering the User profile. Administration reserves the right to suppress using particular usernames and set requirements to username and password (length, allowed characters etc).\n"
+        "\n"
+        "2.5. The User is solely responsible for password reliability and secure password confidentiality by him/herself. The User is solely responsible for activity (and its consequences) performed on the Site using User profile, including passing username and password with the User’s voluntary consent to third party under any condition (including any kind of agreements). In this case activity performed on the Site using User profile is defined as activity performed by the User him/herself.\n"
+        "\n"
+        " \n"
+        "\n"
+        "3. Terms of Use\n"
+        "\n"
+        "3.1. The User is solely responsible for his or her actions concerning the third person, connected with using the Site, including actions leading to the third person’s legitimate interests and rights abuses and/or corresponding law violation.\n"
+        "\n"
+        "3.2. When using the Site the User should not:\n"
+        "\n"
+        "3.2.1. Upload, share, send, post or transmit in any other way content that is contrary to law, harmful, slanderous, might cause moral injury, demonstrates or promotes violence and humiliation, violation of intellectual property rights; content that promotes discrimination or violence against individuals or groups based on race or ethnic origin, religion, gender, nationality, sexual orientation/gender identity or social identity; content that is aimed at some individuals or organizations injury; content having pornography or juvenile eroticism explicit elements, promoting and advertising sexual activity for payment (including that using another kind of service as a cover); content explaining making, taking or handling narcotic drugs or similar substances; content explaining making, taking or handling explosive materials and weapon.\n"
+        "\n"
+        "3.2.2. Violate rights of the third person, including rights of juveniles and/or injure them in any form.\n"
+        "\n"
+        "3.2.3. Upload, share, send, post or transmit in any other way content without permission according to the active law or corresponding agreements.\n"
+        "\n"
+        "3.2.4. Upload, share, send, post or transmit in any other way content containing unlicensed advertizing information, spam (spamdexing, search engine spam), misleading metadata and scams, other people e-mail lists, network marketing, multilevel marketing (MLM) layout, internet marketing and e-mail marketing entrepreneurial activity, “chain letters”.\n"
+        "\n"
+        "3.2.5. Upload, share, send, post or transmit in any other way materials, containing computer viruses and other computer codes, files and programs aimed at deranging, destroying or controlling of any piece of computer or telecommunications equipment; programs aimed at performing unauthorized access, and also serial numbers to commercial program products and/or programs generating serial numbers, usernames and other components for obtaining unauthorized access to paid sources on the Internet, likewise  posting links to any above-listed information.\n"
+        "\n"
+        "3.2.6. Perform unauthorized collecting and saving personal information of other people.\n"
+        "\n"
+        "3.2.7. Deliberately derange the Site normal functioning.\n"
+        "\n"
+        "3.2.8. Post links to sources of information that is contrary to any law.\n"
+        "\n"
+        "3.2.9.  Aiding and abetting in violating prohibition or restrictions, imposed on by the Terms.\n"
+        "\n"
+        "3.2.10. Violate the law in any other way, including violation of international jurisdiction.\n"
+        "\n"
+        " \n"
+        "\n"
+        "4. Intellectual Property Rights. Copyright.\n"
+        "\n"
+        "4.1. All materials, including without limitation all text, design, graphics, drawings, photographs, video clips, databases, computer programs, music and sounds used on this Site (collectively, the \"Content\") and also the content posted on the Site, are subject to intellectual property rights including copyrights held by or licensed by the Administration, Users and other right holders.\n"
+        "\n"
+        "4.2. Using of the content and/or some other elements of the Site is possible only within the functions proposed. No elements of the Site content, or other content posted on the Site should be used in any other way without preliminary permission of a right holder. Under the term “using” can be subsumed reproducing, copying, remaking, and spreading on any terms, displaying in the frame etc. With the exception of some cases directly sanctioned by law or by these Terms of Service.\n"
+        "\n"
+        "Using of the content and/or some other elements of the Site by the User, or using of any content posted for private noncommercial needs is permitted only with reserving    copyright symbols, related rights, trademarks, other notices of authorship, preserving the author’s name (pseudonym)/right holder’s name without changes, preserving the corresponding object without changes. With the exception of some cases directly sanctioned by law or by these Terms of Service.\n"
+        "\n"
+        " \n"
+        "\n"
+        "5. Sites and Content of Third party.\n"
+        "\n"
+        "5.1. The Site can contain links to other sites on the Internet (sites of the third arty). Third party, mentioned above and its content are not verified by the Administration if they meet set requirements (concerning reliability, completeness, legitimacy etc). The Administration is not responsible for any information and materials posted on the sites of third party which can be reached through the Site, including all the opinions or statements, expressed on the sites of third party, advertisement etc. The Administration also is not responsible for accessibility of those sites and of their content and for the consequences that occur as a result of using strange sites by the User.\n"
+        "\n"
+        "5.2. References and links to any site, product, service or any other information having commercial or noncommercial basis posted on the Site is not considered to be an approval or recommendation of those products (services, actions) from the Administration, with the exception of some cases directly prescribed on the Site.\n"
+        "\n"
+        " \n"
+        "\n"
+        "6. Advertisements and Promotions.\n"
+        "\n"
+        "6.1. The Administration is not responsible for the advertising or promoting content, posted on the Site.\n"
+        "\n"
+        " \n"
+        "\n"
+        "7. Disclaimer of Warranties. Limitation of Liability.\n"
+        "\n"
+        "7.1. You expressly understand and agree that you use of the Site is at your sole risk. The Site is provided on an “as is” and “as available” basis. The Administration expressly disclaims all warranties of any kind including fitness for a particular purpose of the User. \n"
+        "\n"
+        "7.2. The Administration makes no warranty that the Site meets/will meet all your requirements; the Site will be uninterrupted, timely, secure or error-free; the results that may be obtained from the use of the Site will be accurate, reliable and suitable for any particular purpose (ascertainment or validation of facts for example); the quality of any products, services, information or other materials obtained through the Site will entirely meet your expectations.  \n"
+        "\n"
+        "7.3. Any information and or/material (including software, letters, instructions and guides to actions etc) downloaded or otherwise obtained through the use of the Site is done at your own discretion and risk, and that you will be solely responsible for any consequences brought by using all the materials mentioned above and for any damage to your computer system or to third party or loss of data that results from the download of any such material.\n"
+        "\n"
+        "7.4. You expressly understand and agree that the Administration shall not be liable for any damages resulting from the use or the inability to use the Site or its certain parts and/or functions.\n"
+        "\n"
+        " \n"
+        "\n"
+        "8. General Information\n"
+        "\n"
+        "8.1. The Terms of Service constitutes the entire agreement between you and the Administration and governs your use of the Site, superseding any prior agreements between you and Administration.\n"
+        "\n"
+        "8.2. Laws shall govern the Terms of Service. All questions that are not prescribed in these Terms will be settled by law. All disputes or disagreements between you and us relating to the Terms of Service will be settled by in accordance with legal procedure.\n"
+        "\n"
+        "8.3. Because of gratuitousness of services providing in accordance with the Terms of Service, Consumer Protection Act about protection rights of customers is not applicable to relationship between the Administration and the User.\n"
+        "\n"
+        "8.4. There are no provisions in these Terms that can be understood as setting agency-relationship, association, relations on joint activities, relations of own hire or other kind of relationship between the User and the Administration not specified by the Terms directly.\n"
+        "\n"
+        "8.5. If for some reasons one or several provisions of the Terms are found to be ineffective or invalid, the parties nevertheless agree that the other provisions of the Terms remain in full force and effect.\n"
+        "\n"
+        "8.6. In case of violation by the User or other users of any provision of the Terms, the Administration’s temporal inaction doesn’t deprive the Administration its right to protect the legal interests later and also it should not be considered as a waiver of the Administration rights if such or similar violations take place in future.\n"
+        "\n"
+        "8.7. The Terms of Service and Privacy Policy are presented in the Russian language, and in some cases it can be presented in some other languages only for the User’s acquaintance. Furthermore, in the case of a discrepancy between the Russian language version of the Terms and the version in another language, the Russian language version of the Terms would have primacy.\n"
+        "\n"
+        " \n"
+        "\n"
+        "Contact Details\n"
+        "\n"
+        "   If you have some questions concerning our Privacy Policy, functioning of the Site or our mobile application or your operations with the Site or our mobile application please contact us via contacts@seeyou.media. \n"
+        "\n"
+        " \n"
+        "\n"
+        "© 2015 Seeyou, LLC"</string>
+    <string name="messages">Messages</string>
+    <string name="send">Send</string>
+    <string name="twitter_consumer_key"/>
+    <string name="twitter_consumer_secret"/>
+    <string name="loading">Loading ...</string>
+    <string name="loading_data_user">Loading data user</string>
+    <string name="wrong_networkId">Wrong networkId</string>
+    <string name="error">Errorr !!!</string>
+    <string name="check_internet">Please check your internet connection state</string>
+    <string name="account_not_found">This account not found</string>
+    <string name="database_insertion_error">Database insertion error</string>
+    <string name="input_name">Input name</string>
+    <string name="you_need_accept">You need to accept</string>
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="published">PUBLISHED</string>
+    <string name="category">CATEGORY</string>
+    <string name="detail">DETAIL</string>
+    <string name="comments">COMMENTS</string>
+    <string name="write_your_comments_there">Write your comments there ...</string>
+    <string name="videos">VIDEOS</string>
+    <string name="people">PEOPLE</string>
+    <string name="about_title">ABOUT</string>
+    <string name="games">GAMES</string>
+    <string name="replay">Replay</string>
+    <string name="enter_your_comment">Enter your comment</string>
+    <string name="enter_text">Enter text comment</string>
+    <string name="you_need_register_and_buy_service">\tYou need register and buy service</string>
+</resources>

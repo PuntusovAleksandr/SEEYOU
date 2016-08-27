@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="?attr/actionBarSize"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_marginRight="@dimen/small_margin"
+    android:layout_alignParentRight="true"
+    android:layout_margin="4dp"
+    android:layout_centerVertical="true"
+    android:orientation="vertical">
+
+    <com.aleksandrp.seeyou.view.RoundedImageView
+        android:id="@+id/icon_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="4dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/user"/>
+
+    <TextView
+        android:id="@+id/tv_count_message"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:gravity="center"
+        android:textColor="@color/color_bg_green"
+        android:background="@drawable/round_white"/>
+
+</RelativeLayout>

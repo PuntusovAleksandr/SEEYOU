@@ -1,0 +1,844 @@
+Описание методов Api
+
+Примечания:
+- регистр имен переменных имеет значение, - использовать как в этом описании
+- все функции возвращают json
+- domain.com - пока использовать http://seeyou.bod.com.ua/
+- для получения данных на русском/иврите для запроса использовать адрес вида:
+http://seeyou.bod.com.ua/ru/api/getCountries
+http://seeyou.bod.com.ua/he/api/getCountries
+(примеры получения списка стран на русском и иврите)
+
+=============================================
+
+Авторизация
+линк: domain.com/api/login
+входящие параметры:
+      email
+      password
+
+  возвращаемый ответ:
+
+  {
+      "success":1,
+      "info":"User was logged in successfully",
+      "data":{
+              "user_id":"1",
+              "user_name":"Administrator",
+              "user_avatar":"\/images\/user-default.png",
+      }
+  }
+
+  {"success":0,"info":"Application Key is not valid"}
+
+======================================
+
+Выход
+
+линк: domain.com/api/logout
+входящие параметры:
+
+  возвращаемый ответ:
+  {
+      "success":1,
+      "info":"User was logged out successfully",
+  }
+
+========================================================================
+
+Получить список стран
+
+линк: domain.com/api/getCountries
+входящие параметры:
+
+  возвращаемый ответ:
+{"success":1,"data":[{"id":"1","name":"Israel"}]}
+
+==================================
+
+Получить список городов
+
+линк: domain.com/api/getCities
+входящие параметры:
+
+      countryId (см. /api/getCountries)
+
+возвращаемый ответ:
+{"success":0,"info":"countryId is empty"}
+{"success":1,
+  "data":[{"id":"2","name":"Ashdod"},...,{"id":"33","name":"Zikhron Ya'akov"}]
+}
+
+==================================
+
+Регистрация
+
+линк: domain.com/api/register
+входящие параметры:
+
+  обязательные:
+
+      name
+      email
+      password - минимум 6 знаков
+
+  не обязательные:
+      surname  // Ivanoff
+      birthDate // 22.01.1970
+      countryId // 1
+      cityId  // 22
+      sex // [male || female]
+
+возвращаемый ответ:
+
+{"success":1,"info":"User was registered successfully!"}
+{"success":0,"info":"Database insertion error Duplicate entry 'test@gmail.com' for key 'users_email_unique'"}
+
+==================================
+
+Список категорий для видео
+
+линк: domain.com/api/getVideoCategories
+
+входящие параметры:
+
+возвращаемый ответ:
+
+{"success":1,"data":[{"id":"1","slug":"humor","name":"Humor"},{"id":"2","slug":"policy","name":"Policy"},{"id":"3","slug":"sport","name":"Sport"},{"id":"4","slug":"family_and_children","name":"Family & Children"},{"id":"5","slug":"animals","name":"Animals"},{"id":"6","slug":"art","name":"Art"},{"id":"7","slug":"music","name":"Music"},{"id":"8","slug":"style","name":"Style"},{"id":"9","slug":"news","name":"News"},{"id":"10","slug":"science","name":"Science"},{"id":"11","slug":"places_and_travel","name":"Places & Travel"}]}
+
+==================================
+
+Список категорий для трансляций
+
+линк: domain.com/api/getBroadcastCategories
+
+входящие параметры:
+
+возвращаемый ответ:
+{"success":1,"data":[{"id":"1","slug":"clubs","name":"Clubs"},{"id":"2","slug":"bars","name":"Bars"},{"id":"3","slug":"restaurants","name":"Restaurants"},{"id":"4","slug":"ballrooms","name":"Ballrooms"},{"id":"5","slug":"theaters","name":"Theaters"},{"id":"6","slug":"stadiums","name":"Stadiums"}]}
+
+==================================
+
+Получение списка самых рейтинговых (по версии администрации) видео роликов (SEEYOU CHOICE)
+getVideoList
+линк: domain.com/api/
+
+входящие параметры:
+
+      category - не обязательный, если есть - получаем ролики для заданной категории,
+                 брать из этого метода: /api/getVideoCategories - параметр slug ("slug":"humor")
+      limit - лимит на выборку (не обязательный), по-умолчанию = 35
+
+возвращаемый ответ:
+{"success":1,"data":[{"id":"3","video_src":"\/upload\/0ed508a1bfa971b6adc7b96f61e663eb.mp4","title":"test","description":"test","views":"12","created_at":"2015-09-17 11:32:06","author_name":"Administrator","author_avatar":null,"category_slug":"policy","category_name":"Policy","likes":"1","dislikes":"0"},{"id":"6","video_src":"\/upload\/03659fd531346f121594126ec2d718a1.mp4","title":"rurtyr","description":"tyutyutyut","views":"21","created_at":"2015-09-17 15:31:34","author_name":"Yuriy Bondarenko","author_avatar":"https:\/\/graph.facebook.com\/v2.4\/684396458328032\/picture?type=normal","category_slug":"sport","category_name":"Sport","likes":"1","dislikes":"0"}]}
+
+==================================
+
+Получение видео ролика по ID
+
+линк: domain.com/api/getVideoFileById
+
+входящие параметры:
+
+      video_id
+
+возвращаемый ответ:
+{"success":1,"data":[{"id":"3","video_src":"\/upload\/0ed508a1bfa971b6adc7b96f61e663eb.mp4","title":"test","description":"test","views":"19","created_at":"2015-09-17 11:32:06","author_name":"Administrator","author_avatar":null,"category_slug":"policy","category_name":"Policy","likes":"1","dislikes":"0"}]}
+
+==================================
+
+Получение списка самых популярных видео роликов
+
+линк: domain.com/api/getPopularVideoList
+
+входящие параметры:
+
+      category - не обязательный, аналогично getVideoList
+      limit - лимит на выборку - аналогично getVideoList
+
+возвращаемый ответ:
+(меньше данных чем у getVideoList, так как используется только для построения списка)
+{"success":1,"data":[{"id":"6","video_src":"\/upload\/03659fd531346f121594126ec2d718a1.mp4","title":"rurtyr","views":"21","author_name":"Yuriy Bondarenko","category_slug":"sport"},{"id":"3","video_src":"\/upload\/0ed508a1bfa971b6adc7b96f61e663eb.mp4","title":"test","views":"13","author_name":"Administrator","category_slug":"policy"}]}
+
+==================================
+
+Получение списка самых новых видео роликов
+
+линк: domain.com/api/getLastVideoList
+
+входящие параметры:
+
+      category - не обязательный, аналогично getVideoList
+      limit - лимит на выборку - аналогично getVideoList
+
+возвращаемый ответ:
+аналогично getPopularVideoList
+==================================
+
+Получение списка видео роликов, понравившихся пользователю
+// требуется авторизация
+линк: domain.com/api/getUsersLikedVideo
+
+входящие параметры:
+
+возвращаемый ответ:
+{"success":0,"info":"User must be logged in"}
+{"success":1,"data":[{"id":"6","video_src":"\/upload\/03659fd531346f121594126ec2d718a1.mp4","title":"rurtyr","description":"tyutyutyut","views":"22","created_at":"2015-09-17 15:31:34","author_name":"Yuriy Bondarenko","author_avatar":"https:\/\/graph.facebook.com\/v2.4\/684396458328032\/picture?type=normal","category_slug":"sport","category_name":"Sport"},{"id":"3","video_src":"\/upload\/0ed508a1bfa971b6adc7b96f61e663eb.mp4","title":"test","description":"test","views":"13","created_at":"2015-09-17 11:32:06","author_name":"Administrator","author_avatar":null,"category_slug":"policy","category_name":"Policy"}]}
+
+==================================
+
+Поиск видео роликов
+
+линк: domain.com/api/searchVideo
+
+входящие параметры:
+
+      search - строка поиска - больше 5 символов
+возвращаемый ответ:
+{"success":0,"info":"Search result is empty"}
+{"success":1,"data":[{"id":"6","video_src":"\/upload\/03659fd531346f121594126ec2d718a1.mp4","title":"rurtyr","description":"tyutyutyut","views":"22","created_at":"2015-09-17 15:31:34","author_name":"Yuriy Bondarenko","author_avatar":"https:\/\/graph.facebook.com\/v2.4\/684396458328032\/picture?type=normal","category_slug":"sport","category_name":"Sport"},{"id":"3","video_src":"\/upload\/0ed508a1bfa971b6adc7b96f61e663eb.mp4","title":"test","description":"test","views":"13","created_at":"2015-09-17 11:32:06","author_name":"Administrator","author_avatar":null,"category_slug":"policy","category_name":"Policy"}]}
+
+==================================
+
+Получение комментариев к видео
+
+линк: domain.com/api/getVideoComments
+
+входящие параметры:
+
+      videoId
+
+возвращаемый ответ:
+
+{"success":1,"data":[{"text":"iuyiyi","type":"1","relation":"6999999","created_at":"2015-10-08 09:41:42","author_name":"Administrator","author_avatar":null},{"text":"wergwegr","type":"2","relation":"6999998","created_at":"2015-10-08 09:41:50","author_name":"Administrator","author_avatar":null},{"text":"jhkjhdsfghksdhfgjk","type":"1","relation":"5999999","created_at":"2015-10-08 09:30:41","author_name":"Administrator","author_avatar":null},{"text":"wewgrerg","type":"1","relation":"4999999","created_at":"2015-10-08 09:25:53","author_name":"Administrator","author_avatar":null},{"text":"hgfghfhgfhg","type":"1","relation":"3999999","created_at":"2015-09-21 12:14:43","author_name":"Yuriy Bondarenko","author_avatar":"https:\/\/graph.facebook.com\/v2.4\/684396458328032\/picture?type=normal"},{"text":"214351245","type":"2","relation":"3999998","created_at":"2015-10-08 09:42:07","author_name":"Administrator","author_avatar":null}]}
+
+Примечание:
+type - тип комментария (1-коммент, 2 - ответ на коммент)
+relation - связь между комментами - вычисляется на сервере, используется для правильной хронологии отображения,
+  (когда пользователь нажимает Reply, - берется значение relation этого комментария (для которого пишется ответ) и отправляется на сервер вместе с текстом комментария)
+
+==================================
+
+Получение комментариев к трансляции
+
+линк: domain.com/api/getBroadcastComments
+
+входящие параметры:
+
+      broadcastId
+
+возвращаемый ответ:
+
+все тоже что и здесь /api/getVideoComments
+{"success":0,"info":"Broadcast has no comments"}
+
+==================================
+
+Добавление комментариев
+
+линк: domain.com/api/addComment
+
+входящие параметры:
+
+      text - текст комментария
+      type - тип комментария (1-комментарий, 2-ответ на комментарий)
+      entity - тип комментируемой сущности (1-видео, 2-трансляция)
+      resource - идентификатор видео-ролика или трансляции (в зависимости от типа сущности)
+      relation - обязателен если type == 2 (ответ на комментарий), в этом случае данный параметр должен равняться
+          параметру relation комментария для которого пишется ответ.
+
+возвращаемый ответ:
+
+{"success":0,"info":"User must be logged in"}
+{"success":1,"type":"1","html":"html-code для вставки на страницу"}
+
+=============================================================
+
+Добавление лайков/дизлайков
+есть 3 типа сущностей которые "лайкаются"
+это: видеоролики, трансляции и страницы (главная и страницы категорий видео)
+Для роликов и трансляций количество лайков/дизлайков получаем вместе с данными о ролике/бродкасте
+
+при добавлении лайка/дизлайка в ответе приходит параметр action_code (используется для перерисовки данных по лайкам/дизлайкам на странице),
+который может содержать значения:
+0 - данный пользователь уже лайкнул(дизлайкнул) данную сущность (просто игнорируем)
+1 - означает удалить лайк(дизлайк) и прибавить дизлайк(лайк) (приходит если, например, пользователь ранее отметил сущность как
+понравившуюся и кликнул на дизлайк; и наоборот)
+2 - прибавить лайк/дизлайк (пользователь ранее не голосовал за данную сущность)
+
+-------------------------
+
+Метод для получения лайков для страницы
+линк: domain.com/api/getPageLikes
+
+входящие параметры:
+
+      pageSlug - не обязательный, если пустой - данные для главной страницы
+
+возвращаемый ответ:
+{"success":1,"data":{"dislikes":1}}
+
+-------------------------
+
+Метод для получения дизлайков для страницы
+линк: domain.com/api/getPageDislikes
+
+входящие параметры:
+
+      pageSlug - не обязательный, если пустой - данные для главной страницы
+
+возвращаемый ответ:
+{"success":1,"data":{"likes":0}}
+
+---------------------------------------------
+
+Добавление лайка для страницы
+линк: domain.com/api/addPageLike
+
+входящие параметры:
+
+      pageSlug - не обязательный, если пустой - данные для главной страницы
+
+возвращаемый ответ:
+{"success":1,"action_code":2}
+
+---------------------------------------------
+
+Добавление дизлайка для страницы
+линк: domain.com/api/addPageDislike
+
+входящие параметры:
+
+      pageSlug - не обязательный, если пустой - данные для главной страницы
+
+возвращаемый ответ:
+{"success":1,"action_code":2}
+
+---------------------------------------------
+
+Добавление лайка для видео
+линк: domain.com/api/addVideoLike
+
+входящие параметры:
+
+      videoId - id видеоролика
+
+возвращаемый ответ:
+{"success":1,"action_code":2}
+
+---------------------------------------------
+
+Добавление дизлайка для видео
+линк: domain.com/api/addVideoDislike
+
+входящие параметры:
+
+      videoId - id видеоролика
+
+возвращаемый ответ:
+{"success":1,"action_code":2}
+
+---------------------------------------------
+
+Добавление лайка для трансляции
+линк: domain.com/api/addBroadcastLike
+
+входящие параметры:
+
+      broadcastId - id трансляции
+
+возвращаемый ответ:
+{"success":1,"action_code":2}
+
+---------------------------------------------
+
+Добавление дизлайка для трансляции
+линк: domain.com/api/addBroadcastDislike
+
+входящие параметры:
+
+      broadcastId - id трансляции
+
+возвращаемый ответ:
+{"success":1,"action_code":2}
+
+==============================================
+Получить список бродкастов
+
+линк: domain.com/api/getBroadcasts
+
+входящие параметры:
+
+      slug - slug категории, например 'clubs', если не передан - выводятся все бродкасты
+
+возвращаемый ответ:
+{"success":1,"data":[{"id":"1","src":"cam1","category_id":"1","club_id":"1","city_id":"10","country_id":"1","views":"209","status":"1","is_adult":"0","title":"test broadcast Camera","start_time":"1000000000","end_time":"2000000000","description":"test br gfhgfhgfhgfhgfhgf","date":"2015-09-29 12:02:37","category_slug":"clubs","category_name":"Clubs","club_name":"Test organization"},{"id":"2","src":"http:\/\/seeyou.bod.com.ua:8080\/playlist\/","category_id":"1","club_id":"1","city_id":"10","country_id":"1","views":"86","status":"1","is_adult":"0","title":"Test bc playlist","start_time":"1000000000","end_time":"2000000000","description":"test bc sdfg sdfgsdf sdfgsdfg sdfgdsfg","date":"2015-10-08 15:07:36","category_slug":"clubs","category_name":"Clubs","club_name":"Test organization"},{"id":"3","src":"test3","category_id":"1","club_id":"3","city_id":"20","country_id":"1","views":"29","status":"1","is_adult":"0","title":"First studio broadcast","start_time":"1000000000","end_time":"2000000000","description":"dljdl sdlkfjgkl;j dsfjg;lsdj sdfljgkl;sdjfkgljkls;dg","date":"2015-11-27 14:56:32","category_slug":"clubs","category_name":"Clubs","club_name":"Studio"}]}
+
+==============================================
+Получить сообщения пользователя
+линк: domain.com/api/getUsersMessages
+
+входящие параметры:
+
+broadcastId - id трансляции
+
+возвращаемый ответ:
+{"success":1,"data":[{"id":"15","subject":"Video moderation message","text":" ","status":"1","sender_id":"1","sender_name":"Administrator","date":"2015-11-23 12:03:26"},{"id":"13","subject":"Video moderation message","text":" ","status":"1","sender_id":"1","sender_name":"Administrator","date":"2015-11-23 12:02:35"}]}
+
+----------------
+
+Удалить сообщение пользователя
+линк: domain.com/api/deleteUsersMessage
+
+входящие параметры:
+
+id - id сообщения
+
+возвращаемый ответ:
+{"success":1,"info":"Message was deleted successfully!"}
+
+----------------
+
+Ответить на сообщение пользователя
+линк: domain.com/api/replyUsersMessage
+
+входящие параметры:
+
+subject - тема
+text - текст
+to - id получателя, см getUsersMessages sender_id
+
+возвращаемый ответ:
+{"success":1,"info":"Message was sent successfully!"}
+
+-------------------------------
+
+Получение списка загруженных пользователем видеороликов
+
+линк: domain.com/api/getUsersVideo
+
+входящие параметры: отсутствуют
+
+возвращаемый ответ:
+{"success":1,"data":[{"id":"6","src":"\/upload\/9f46ea56f63208fa865334d0ba870d3b_cats.mp4.mp4","title":"Cats against civilization","description":"","status":"1","date":"2015-09-04 18:10:17","category_slug":"animals"},{"id":"8","src":"\/upload\/3f044b40e77ee6e3d5c00f68318bc813_lift.mp4.mp4","title":"Joke in the lift","description":"Hard joke in the lift","status":"2","date":"2015-09-04 18:21:33","category_slug":"music"},{"id":"9","src":"\/upload\/4070ed15a301933290a8b406c7174cc0_combat.mp4.mp4","title":"Mortal Kombat","description":"Mortal Kombat in the lift","status":"2","date":"2015-09-04 18:23:58","category_slug":"art"},{"id":"11","src":"\/upload\/46d3a0fefa965e46739d7a4fb5301c78_Raven.mp4.mp4","title":"Raven riding on wipers","description":"Raven riding on wipers - test video","status":"1","date":"2015-09-04 18:25:51","category_slug":"animals"},{"id":"12","src":"\/upload\/f6c203d3ad56ea9b5fcf41a8eb1f8dfc_rain.mp4.mp4","title":"Scene of rain","description":"An interesting scene of rain","status":"1","date":"2015-09-04 18:28:09","category_slug":"animals"},{"id":"13","src":"\/upload\/96949f2ad26f7a63a7241c1066b50c69_strikes.mp4.mp4","title":"Lightning strikes","description":"Lightning strikes in slowing","status":"2","date":"2015-09-04 18:29:13","category_slug":"sport"},{"id":"14","src":"\/upload\/4725998f8b9e5696d8bc63ae708cb118_Man-woofer.mp4.mp4","title":"Man-woofer","description":"Man-woofer video","status":"1","date":"2015-09-04 18:30:13","category_slug":"sport"},{"id":"65","src":"\/upload\/d3c5282381d3cf937491fcec79fbe738.mp4","title":"test ff","description":"jhgjhgjhg ","status":"2","date":"2015-10-09 17:16:22","category_slug":"auto"},{"id":"66","src":"\/upload\/cb4de38243e33d02447f0dbdbf33144c.mp4","title":"ljljlkj","description":"fgjhgkjhjkh","status":"2","date":"2015-10-09 17:18:13","category_slug":"auto"},{"id":"75","src":"\/upload\/6ed709dcf37b73fb5f891135d8d942be.mp4.mp4","title":"gsdgsdfg","description":"","status":"2","date":"2015-10-22 08:59:15","category_slug":"humor"}]}
+
+-------------------------------
+
+Удаление пользовательского видеоролика
+
+линк: domain.com/api/deleteUsersVideo
+
+входящие параметры: id - id видео файла
+возвращаемый ответ:
+{"success":0,"info":"Error: this file is not belong to logged user"}
+
+-------------------------------
+
+Обновление личных данных пользователя
+
+линк: domain.com/api/updateUsersProfile
+
+входящие параметры:
+
+name - имя
+surname - фамилия
+birthday - дата рождения (дд.мм.гггг)
+country - id страны
+city - id города
+sex - пол (male, female)
+
+возвращаемый ответ:
+{"success":true,"info":"User was updated successfully"}
+
+-------------------------------
+
+Получение списка трансляций пользователя
+
+линк: domain.com/api/getUsersBroadcasts
+
+входящие параметры: отсутствуют
+
+возвращаемый ответ:
+{"success":1,"data":[{"id":"1","src":"cam1","category_id":"1","club_id":"1","city_id":"10","country_id":"1","views":"224","status":"1","title":"test broadcast Camera","description":"test br gfhgfhgfhgfhgfhgf","date":"2015-09-29 12:02:37","start_time":"1000000000","end_time":"2000000000","category_slug":"clubs","category_name":"Clubs","club_name":"Test organization"},{"id":"2","src":"http:\/\/seeyou.bod.com.ua:8080\/playlist\/","category_id":"1","club_id":"1","city_id":"10","country_id":"1","views":"89","status":"1","title":"Test bc playlist","description":"test bc sdfg sdfgsdf sdfgsdfg sdfgdsfg","date":"2015-10-08 15:07:36","start_time":"1000000000","end_time":"2000000000","category_slug":"clubs","category_name":"Clubs","club_name":"Test organization"}]}
+
+-------------------------------
+
+Создание трансляции пользователем (только для хозяина заведения)
+Перед созданием трансляции необходимо добавить заведение(я).
+
+линк: domain.com/api/addUsersBroadcast
+
+входящие параметры:
+club_id - ид заведения (выбирается среди заведений данного пользователя)
+city_id - ид города
+country_id - ид страны
+title - заголовок
+description - описание
+
+возвращаемый ответ:
+{"success":1,"info":"Broadcast was created successfully"}
+
+-------------------------------
+
+Обновление трансляции пользователем (только для хозяина заведения)
+
+линк: domain.com/api/updateUsersBroadcast
+
+входящие параметры:
+club_id - ид заведения (выбирается среди заведений данного пользователя)
+city_id - ид города
+country_id - ид страны
+title - заголовок
+description - описание
+
+возвращаемый ответ:
+{"success":1,"info":"Broadcast was updated successfully"}
+
+-------------------------------
+
+Удаление трансляции пользователем (только для хозяина заведения)
+
+линк: domain.com/api/updateUsersBroadcast
+
+входящие параметры:
+id - id трансляции
+
+возвращаемый ответ:
+{"success":1,"info":"Broadcast was deleted successfully"}
+
+-------------------------------
+
+Получение списка организаций пользователя
+
+линк: domain.com/api/getUsersOrganizations
+
+входящие параметры: отсутствуют
+
+возвращаемый ответ:
+{"success":1,"data":[{"id":"1","name":"Test organization","description":"Test organization description","email":"test-org@gmail.com","address":"Test organization address","phone":"0997787788","website":"test-org.com","club_lng":"","club_lat":"","city_id":"10","country_id":"1","status":"1","date_created":"2015-09-29 10:56:49","category_name":"Clubs"},{"id":"2","name":"Club the disco","description":"the beest club in the world","email":"admin@admin.com","address":"Somewhere here","phone":"1994566523","website":"test.com","club_lng":"","club_lat":"","city_id":"9","country_id":"1","status":"1","date_created":"2015-10-08 15:07:05","category_name":"Clubs"}]}
+
+-------------------------------
+
+Создание организации пользователем
+
+линк: domain.com/api/createUsersBroadcast
+
+входящие параметры:
+
+user_id - ид пользователя (хозяина заведения)
+category_id - ид категории заведения
+city_id - ид города
+country_id - ид страны
+phone - телефон
+email
+website
+name - название организации
+description - описание
+address - адрес
+
+возвращаемый ответ:
+{"success":1,"info":"Organization was created successfully"}
+
+-------------------------------
+
+Обновление организации пользователем
+
+линк: domain.com/api/updateUsersOrganization
+
+входящие параметры:
+
+organization_id - ид редактируемой организации
+category_id - ид категории заведения
+city_id - ид города
+country_id - ид страны
+phone - телефон
+email
+website
+name - название организации
+description - описание
+address - адрес
+
+возвращаемый ответ:
+{"success":1,"info":"Organization was updated successfully"}
+-------------------------------
+
+Получение списка менеджеров (контролеров) организаций
+(Хозяин заведения может создавать учетную запись контролера (менеджера) организации, по одному для каждой организации)
+Методы для работы с контролерами организаций используются только для учетных записей "Хозяин заведения"
+
+линк: domain.com/api/getOrganizationManagers
+
+входящие параметры:
+
+club_id - ид организации для которой нужно получить данные о контролере
+
+возвращаемый ответ:
+{"success":1,"data":[{"manager_id":"5","manager_user_id":"904","manager_login":"controller_3@seeyou.com","manager_pass":"ae9e59"}]}
+
+-------------------------------
+
+Создание менеджера (контролера) организации
+
+линк: domain.com/api/addOrganizationManager
+
+входящие параметры:
+
+club_id - ид организации для которой нужно создать контролера
+
+возвращаемый ответ:
+{"success":1,"info":"Manager was created successfully"}
+
+-------------------------------
+
+Удаление менеджера (контролера) организации
+
+линк: domain.com/api/deleteOrganizationManager
+
+входящие параметры:
+
+club_id - ид организации для которой нужно удалить контролера
+
+возвращаемый ответ:
+{"success":1,"info":"Manager was deleted successfully"}
+
+-------------------------------
+
+Генерация нового пароля для менеджера (контролера) организации
+
+линк: domain.com/api/resetOrganizationManagerPassword
+
+входящие параметры:
+
+club_id - ид организации к которой относится контролер
+
+возвращаемый ответ:
+{"success":1,"info":"Manager password was reset successfully!"}
+
+-------------------------------
+
+Получение списка подарков (флаеров) пользователя
+
+линк: domain.com/api/getUsersGifts
+
+входящие параметры:
+отсутствуют
+
+возвращаемый ответ:
+{"success":1,"data":[{"gift_id":"611","gift_club_id":"3","title":"test fl","description":"","code":"7e88ff7e82","status":"1","owner_id":"1","user_id":"5","valid_to":"","created_at":"2015-11-30 21:02:59","updated_at":"2015-12-03 20:59:12"},{"gift_id":"612","gift_club_id":"3","title":"test fl","description":"","code":"0051a62a3d","status":"1","owner_id":"1","user_id":"5","valid_to":"","created_at":"2015-11-30 21:02:59","updated_at":"2015-12-03 21:01:53"},{"gift_id":"613","gift_club_id":"3","title":"test fl","description":"","code":"57ccdd3a05","status":"1","owner_id":"1","user_id":"5","valid_to":"","created_at":"2015-11-30 21:02:59","updated_at":"2015-12-03 21:59:07"}]}
+
+-------------------------------
+
+Получение списка флаеров организации
+
+линк: domain.com/api/getOrganizationFlyers
+
+входящие параметры:
+club_id - ид организации
+search - строка поиска (поиск по коду флаера), не обязательный
+
+возвращаемый ответ:
+{"success":1,"data":[{"gift_id":"614","gift_club_id":"3","title":"test fl","description":"","code":"c2b80a011d","status":"0","owner_id":"5","user_id":null,"valid_to":"","created_at":"2015-11-30 21:02:59","updated_at":"2015-11-30 21:02:59"},{"gift_id":"615","gift_club_id":"3","title":"test fl","description":"","code":"b65c93c7a6","status":"0","owner_id":"5","user_id":null,"valid_to":"","created_at":"2015-11-30 21:02:59","updated_at":"2015-11-30 21:02:59"}]}
+
+-------------------------------
+
+Удаление ВСЕХ флаеров организации
+Удаляются все флаеры в статусе "new" - то есть, те, которые не были присвоены пользователю
+
+линк: domain.com/api/deleteOrganizationFlyers
+
+входящие параметры:
+id - ид организации, для которой удаляются флаеры
+
+возвращаемый ответ:
+{"success":1,"info":"Flyers were deleted successfully!"}
+
+-------------------------------
+
+Удаление флаера для организации
+(Удаляется флаер только в статусе "new")
+
+линк: domain.com/api/deleteOrganizationFlyer
+
+входящие параметры:
+id - ид флаера
+
+возвращаемый ответ:
+{"success":1,"info":"Flyer was deleted successfully!"}
+
+-------------------------------
+
+Активация флаера для организации (осуществляется контролером организации, когда посетитель предъявляет флаер)
+
+линк: domain.com/api/activateOrganizationFlyer
+
+входящие параметры:
+id - ид флаера
+
+возвращаемый ответ:
+{"success":1,"info":"Flyer was activated successfully!"}
+
+-------------------------------
+
+Создание флаеров для организации (только для хозяина заведения)
+
+линк: domain.com/api/addOrganizationFlyer
+
+входящие параметры:
+
+club_id - ид организации
+title - Название, заголовок
+description - описание, не обязательный (пока не используется)
+amount - количество флаеров (по-умолчанию 1), 100 максимум
+endDate не обязательный - дата, до которой действует флаер (22.01.2016)
+endTime не обязательный - время, до которого действует флаер (15:30)
+
+возвращаемый ответ:
+{"success":1,"info":"Flyer was created successfully!"}
+
+-------------------------------
+Получение статуса об игре для пользователя
+Вызывается после успешно собранного пазла (окончания игры)
+
+линк: domain.com/api/getUsersGameStatus
+
+входящие параметры:
+
+club_id - ид организации, к которой относится данная игра
+
+Описание возможных ответов
+Пример для цикла из 3-х игр с возможностью играть раз в сутки.
+Если пользователь сыграл одну игру, а при выигрыше следующей прошло более 2-х суток с момента последнего выигрыша, его игровой счетчик сбрасывется и для выигрыша флаера придется играть цикл заново.
+Если пользователь собирает пазл в течении 3-х дней (например раз в день), он получает подарок (флаер) от заведения (приналичии последнего).
+
+Параметры ответа:
+games_to_win - количество игр, которые необходимо сыграть для получения флаера
+next_play - дата и время с которого будет возможна следующая "призовая игра"
+"status":400 - пользователь уже играл сегодня
+"status":600 - у заведения нет свободных призовых флаеров
+"status":500 - пользователь выиграл флаер флаеров
+
+
+{"success":0,"info":"User must be logged in"}
+{"success":0,"info":"Parameter club_id is not set"}
+
+{"success":1,"status":0,"games_to_win":2,"info":"Game was created successfully"} - пользователь превый раз выиграл в данном заведении
+{"success":1,"status":1,"games_to_win":2,"info":"Game status was set to 1"} - успешно сыгранная игра, смена игрового статуса
+{"success":1,"status":400,"next_play":"12.12.2015 13:17","info":"You have already played today"}
+{"success":1,"status":600,"info":"Sorry, club has no free flyers"}
+{"success":1,"status":500,"flyer_id":120,"flyer_title":"Test flyer","flyer_description":"","flyer_code":"7e88ff7e82","flyer_end_time":"","info":"You won the game"}
+
+-------------------------------
+
+-------------------------------
+функции загрузки файлов
+-------------------------------
+Загрузка аватара организации
+
+линк: domain.com/api/uploadOrganizationAvatar
+
+входящие параметры:
+- передаваемый файл
+club_id- ид организации
+
+возвращаемый ответ:
+{
+  	 'success' => true,
+           	'fileName'=>$fileName,
+           	'fileSrc'=>'/upload/clubs_avatars/'.$fileName,
+           	'uploadfile'=>$fileSize,
+           	'mimeType'=>$mimeType,
+           	'uploadError'=>$uploadError
+}
+-------------------------------
+Загрузка аватара пользователя
+
+линк: domain.com/api/uploadUserAvatar
+
+входящие параметры:
+- передаваемый файл
+
+возвращаемый ответ:
+{
+  	 'success' => true,
+           	'fileName'=>$fileName,
+           	'fileSrc'=>'/upload/user_avatar/'.$fileName,
+           	'uploadfile'=>$fileSize,
+           	'mimeType'=>$mimeType,
+           	'uploadError'=>$uploadError
+}
+-------------------------------
+Загрузка постера трансляции
+
+линк: domain.com/api/uploadBroadcastPoster
+
+входящие параметры:
+- передаваемый файл
+broadcast_id  - id трансляции
+
+возвращаемый ответ:
+{
+  	 'success' => true,
+           	'fileName'=>$fileName,
+           	'fileSrc'=>'/upload/broadcast_posters/'.$fileName,
+           	'uploadfile'=>$fileSize,
+           	'mimeType'=>$mimeType,
+           	'uploadError'=>$uploadError
+}
+
+-------------------------------
+Загрузка видео пользователем
+2 запроса:
+1) Передача файла с конвертацией на сервере
+2) Передача остальных данных, включая параметры для обрезки видео
+
+----
+
+1 запрос:
+
+линк: domain.com/api/uploadUsersVideo
+
+входящие параметры:
+- передаваемый файл
+
+возвращаемый ответ:
+{
+           	'fileName'=>$fileName,   - имя файла на сервере после загрузки
+           	'fileDuration'=>$duration, // 300 - длительность файла в секундах
+           	'uploadfile'=>$fileSize,  //размер файла
+           	'mimeType'=>$mimeType,
+           	'uploadError'=>$uploadError, - 0
+}
+Примечание: скриншот к видео на сервере создается по принципу video_file_name.mp4.jpg
+(на клиенте получить превью можно <img src="/upload/a141f5f40d820012e816ad9184591fdf.mp4.jpg"> , где a141f5f40d820012e816ad9184591fdf.mp4 - $fileName в ответе)
+Если пользователь админ, $duration приходит равным 10 (обрезка на клиенте не происходит)
+
+---
+
+2 запрос
+
+линк: domain.com/api/insertUsersVideo
+
+входящие параметры:
+
+filename == $fileName, который приходит в ответе первого запроса
+left_limit - время начала обрезки, в формате 00:00:10
+right_limit - время конца обрезки, в формате 00:01:10
+category - id категории загружаемого видео
+title
+description
+
+возвращаемый ответ:
+{
+'fileName'=>$fileName.'.mp4',
+'convert_status'=>$convert_status, (просто инфо - пояснение о конвертации)
+'left_limit' => $left_limit,
+'right_limit' => $right_limit,
+'duration' => $realDuration,
+}
+
+
+-------------------------------
+
+
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+
+    <DatePicker
+        android:id="@+id/data_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:calendarViewShown="false"
+        android:spinnersShown="true"/>
+
+    <Button
+        android:id="@+id/bt_data_picker"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="@dimen/midl_size"
+        android:layout_marginRight="@dimen/midl_size"
+        android:layout_margin="@dimen/midl_size"
+        android:background="@drawable/button_signin_bg"
+        android:text="@string/ok"
+        android:textColor="@android:color/white"/>
+
+
+</LinearLayout>

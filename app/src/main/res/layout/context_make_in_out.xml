@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="@dimen/activity_horizontal_margin"
+              android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_show_message_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:hint="@string/enter_your_comment"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_cancel_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@color/color_bg_green"
+            android:text="@string/cancel"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/bt_ok_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@color/color_bg_green"
+            android:text="@string/ok"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

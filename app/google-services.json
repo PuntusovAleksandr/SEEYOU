@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "877085847203",
+    "project_id": "seeyoullc-1348"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877085847203:android:dc201ebf1dd9d13d",
+        "android_client_info": {
+          "package_name": "com.aleksandrp.seeyou"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877085847203-dpi0i5j36iog3ne4gb6238u68758fu8l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aleksandrp.seeyou",
+            "certificate_hash": "83AAAA1A9CC9DF8FAC5189D7B1F5D79626ED47B3"
+          }
+        },
+        {
+          "client_id": "877085847203-37n6rkli81slggasnu4hkoojj1k09d8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ8yHPNT1Fj8gcAIZcWLvZc0eqK8i69hg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, user-scalable=no">
+		<title>Title</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<link rel="stylesheet" type="text/css" href="style/snap.css" />
+
+		<link rel="stylesheet" href="style/swiper.min.css">
+		<link rel="stylesheet" href="style/ghost.css">
+		<link rel="stylesheet" href="style/css.css">
+
+
+
+		<!--<link rel="shortcut icon" href="../favicon.ico">-->
+		<script src="js/jquery-latest.js"></script>
+		<script src="js/toggle.js"></script>
+		<script src="js/moment.js"></script>
+		<script src="http://artrubber.com.ua/kvadra/js/jquery.ajaxfileupload.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/storage.js"></script>
+		<script src="js/apiFunctions.js"></script>
+
+
+
+</head>
+
+<body onload="check();">
+	<div class="login-page">
+		<div class="login-logo">
+			<img src="images/logo_w.png">
+		</div>
+		<div class="login-form">
+			<!-- <div class="social-login">
+				<div class="title">
+					Sign in via social account
+				</div>
+				<div class="social-btns">
+					<a href="videoselfie.html"><img src="images/icon-facebook.png"></a>
+					<a href="videoselfie.html"><img src="images/icon-google_plus.png"></a>
+					<a href="videoselfie.html"><img src="images/icon-twitter.png"></a>
+				</div>
+			</div> -->
+			<div class="email-login">
+				<div class="title">
+					Sign in via email
+				</div>
+				<form class="login-email-form">
+					<input type="email" name="email" placeholder="Email">
+					<input type="password" name="password" placeholder="Password">
+					<br>
+				
+						<button type="button" class="green-btn" onclick="login();">Sign in</button>
+			
+				</form>
+			</div>
+		</div>
+		<div class="registration-link">
+			<a href="register.html">&emsp;Registration 〉</a>
+		</div>
+	</div>
+	<!-- !!! MAIN PAGE !!! -->
+	<div id="main-page" style="display: none">
+		<div class="header">
+			<div class="header-logo">
+				<img src="images/logo_w.png">
+			</div>
+			<div class="header-nav">
+				<a href="#" class="icon icon-search"></a>
+				<a href="upload.html" class="icon icon-upload"></a>
+				<button class="user-btn" id="user-nav-btn">
+					<span class="label-ciscle">8</span>
+					<img class="storageSrc" data-storage="userAvatar" src="">
+				</button>
+			</div>
+		</div>
+		<div class="popup-cover"></div>
+		<div class="popup popup-user-nav">
+			<ul>
+				<li class="title">
+					User name
+				</li>
+				<li class="toggle-check">
+					<input type="checkbox" class="check-btn" id="check-btn" />
+					<label for="check-btn">
+						<span>Insaider</span>
+					</label>
+				</li>
+				<hr>
+				<li>
+					<a href="message.html">
+						Message
+						<span class="label-circle">3</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						My profile
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Settings
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						About SeeYou
+					</a>
+				</li>
+				<hr>
+				<li>
+					<a  class="logout" href="index.html">
+						Sign out
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="main-nav">
+			<div class="sub-nav-btn" id="sub-nav-btn">— — —</div>
+			<div class="swiper-pagination">
+				<div class="main-nav-item swiper-pagination-switch" data-id="0" onclick="getSlide(0,0)">Videoselfie</div>
+				<div class="main-nav-item swiper-pagination-switch" data-id="1" onclick="getSlide(1,1)">Broadcasts</div>
+				<div class="main-nav-item swiper-pagination-switch" data-id="2" onclick="getSlide(2,2)">Adult only</div>
+			</div>
+		</div>
+
+		<div>
+			<div class="snap-drawers">
+				<div id="left-nav-btn" class="snap-content">
+					<div class="popup popup-leftnav snap-drawer-left">
+						<ul class="nav-group">
+							<li>
+								<a href="index.html" class="nav-item">Live chanels <span class="online-state">•</span></a>
+							</li>
+						</ul>
+						<hr class="hr-dot">
+						<ul class="nav-group category">
+						</ul>
+						<hr class="hr-dot">
+						<ul class="nav-group">
+							<li>
+								<a href="#" class="nav-item">Your liked videos</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div id="content" >
+		 
+			<div class="main-container" id="play">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+
+					<!-- slide 1 -->
+
+						<div class="swiper-slide">
+							<!-- home page / videoselfie -->
+							
+							<div class="home-videoselfie-container" id="home-videoselfie-container">
+							<!-- 	<div class="video-player">
+									stream videoselfie
+									<div class="video-player-box">
+									  <iframe src="https://www.youtube.com/embed/VTlXttQL_Yk?rel=0&color=white" frameborder="0" allowfullscreen></iframe>
+									</div>
+								</div>
+								<div class="video-about">
+									<div class="video-about-title">
+										<h2>MAIN LIVE CHANEL</h2>
+									 <div class="by-user-name">
+											Seeyou media
+										</div>
+									</div>
+									<div class="video-about-showmore">
+										<button class="btn-showmore" id="show-more-video-info">
+										</button>
+									</div> 
+									<hr>
+									<div class="video-views">
+										<div class="video-views-counter">
+											Views 45 632
+										</div>
+										 <div class="video-about-showmore">
+											<button class="btn-showmore" id="show-more-video-info">
+											</button>
+										</div>
+										<hr>
+										<div class="video-views">
+											<div class="video-views-counter">
+												Views 45 632
+											</div>
+											<div class="video-likes">
+												<div class="like-dislike">
+													<button class="btn-like">
+														<span class="count">1420</span>
+													</button><button class="btn-dislike">
+													<span class="count">52</span>
+												</button>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									 <div class="video-about-addition-block">
+										<div class="video-description">
+											It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+										</div>
+										<div class="video-info">
+											Published <b>Mar 9, 2015</b> &emsp; Category <b><a href="#">Science</a></b>
+										</div>
+									</div> 
+								</div> -->
+
+								<div class="video-additional-content">
+									<div class="toggle-content-box">
+										<div class="aside-video-list videoitem" id="new">
+											
+										</div>
+										<hr class="hr-dot">
+										<div class="more-block">
+											<button type="button">
+												Show more videos
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<br>
+
+								<div class="video-additional-content">
+									<div class="toggle-content-box">
+										<div class="aside-video-list videoitem" id="popular">
+											
+										</div>
+										<hr class="hr-dot">
+										<div class="more-block">
+											<button type="button">
+												Show more videos
+											</button>
+										</div>
+									</div>
+								</div>
+								<br>
+								<div class="video-additional-content">
+									<div class="toggle-content-box">
+										<div class="aside-video-list videoitem" id="seeyouchoice">
+										
+										</div>
+										<hr class="hr-dot">
+										<div class="more-block">
+											<button type="button">
+												Show more videos
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<!-- video page / videoselfie -->
+
+							<div class="video-page-videoselfie-container" style="display:none;" id="video-page-videoselfie-container">
+								<div class="video-player">
+									<div class="video-player-box">
+								
+									</div>
+								</div>
+								<div class="video-about">
+									<div class="video-about-title">
+										Around the World in 360°
+										<div class="by-user-name">
+											Eric Johnson
+										</div>
+									</div>
+									<div class="video-about-showmore">
+										<button class="btn-showmore" id="show-more-video-info">
+										</button>
+									</div>
+									<hr>
+									<div class="video-views">
+										<div class="video-views-counter">
+											Views 45 632
+										</div>
+										<div class="video-likes">
+											<div class="like-dislike">
+												<button class="btn-like">
+													<span class="count">1420</span>
+												</button><button class="btn-dislike">
+												<span class="count">52</span>
+											</button>
+											</div>
+										</div>
+									</div>
+									<div class="video-about-addition-block">
+										<div class="video-description">
+											It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+										</div>
+										<div class="video-info">
+											Published <b>Mar 9, 2015</b> &emsp; Category <b><a href="#">Science</a></b>
+										</div>
+									</div>
+								</div>
+								<div class="video-additional-content">
+									<div class="toggle-content-box">
+										<div class="toggle-content-1 active">
+											<div class="aside-video-list videoitem">
+												<div class="video-item">
+													<a href="broadcast_videos.html" class="video-link">
+														<div class="video-item-preview">
+															<img src="images/video-preview-2.png">
+														</div>
+														<div class="video-item-about">
+															<div class="video-item-title">
+																Video clip name
+															</div>
+															<div class="video-item-addition">
+																by <b>Author Name</b>
+																<br>
+																Views <b>1 564</b>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="video-item">
+													<a href="broadcast_videos.html" class="video-link">
+														<div class="video-item-preview">
+															<img src="images/video-preview-2.png">
+														</div>
+														<div class="video-item-about">
+															<div class="video-item-title">
+																Video clip name
+															</div>
+															<div class="video-item-addition">
+																by <b>Author Name</b>
+																<br>
+																Views <b>1 564</b>
+															</div>
+														</div>
+													</a>
+												</div>
+											</div>
+											<hr class="hr-dot">
+											<div class="more-block">
+												<button type="button">
+													Show more videos
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="comments-box" id="comment-list">
+									<div class="comments-header">
+										<div class="title">
+											comments
+										</div>
+										<div class="video-about-showmore">
+											<a href="#comment-list">
+												<button class="btn-showmore" id="show-more-comments">
+												</button>
+											</a>
+										</div>
+									</div>
+									<div class="comments-list">
+										<div class="comments-input-box">
+											<div class="comments-sign-in">
+												<div class="comments-user-icon">
+													<img src="images/user-1.jpg">
+												</div>
+												<div class="comments-content">
+													<textarea class="comment-textarea" placeholder="Write your comment here.."></textarea>
+													<div class="comments-textarea-controls">
+														<button type="button" class="comments-send-button">
+															Post
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="comments-main">
+											<div class="comments-item">
+												<div class="comments-user-icon">
+													<img src="images/user-2.jpg">
+												</div>
+												<div class="comments-content">
+													<div class="comments-user-name">
+														<a href="#">User name</a> <span class="t-date">17:55</span>
+													</div>
+													<div class="comments-text">
+														User comment text.
+													</div>
+													<div class="comments-replay-btn">
+														<a href="#">Replay</a>
+													</div>
+												</div>
+											</div>
+											<div class="comments-sub-list">
+												<div class="comments-item">
+													<div class="comments-user-icon">
+														<img src="images/user-3.jpg">
+													</div>
+													<div class="comments-content">
+														<div class="comments-user-name">
+															<a href="#">My name</a> <span class="t-date">17:55</span>
+														</div>
+														<div class="comments-text">
+															sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+														</div>
+														<div class="comments-replay-btn">
+															<a href="#">Replay</a>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="comments-item">
+												<div class="comments-user-icon">
+													<img src="images/user-5.jpg">
+												</div>
+												<div class="comments-content">
+													<div class="comments-user-name">
+														<a href="#">Nino</a> <span class="t-date">17:55</span>
+													</div>
+													<div class="comments-text">
+														User comment text. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+													</div>
+													<div class="comments-replay-btn">
+														<a href="#">Replay</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<hr class="hr-dot">
+										<div class="more-block">
+											<button type="button">
+												Show more comments
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /end video page / videoselfie -->
+
+						</div>
+
+						<!-- //END slide 1 / broadcasts -->
+
+
+
+						<!-- slide 2 / broadcasts -->
+					
+						<div class="swiper-slide">
+							<!-- BROADCASTS LIST PAGE -->
+							<div class="aside-video-list" id="broadcast-home-container">
+								<div class="video-container" id="broadcast">
+									
+								</div>
+
+								<hr class="hr-dot">
+								<div class="more-block">
+									<button type="button">
+										Show more videos
+									</button>
+								</div>
+								<br>
+							</div>
+							<!-- //END BROADCASTS LIST PAGE -->
+
+
+							<!-- BROADCASTS VIDEO PAGE -->
+							<div class="broadcast-video-container" id="broadcast-video-container" style="display:none;">
+								<div class="video-player">
+									<div class="video-player-box-broad">
+									
+									</div>
+								</div>
+								<div class="video-about">
+									<div class="video-about-title">
+										Steve Aoki @ Tommorrowland
+										<div class="by-user-name">
+											Party Club channel
+										</div>
+									</div>
+									<div class="video-about-showmore">
+										<button class="btn-showmore" id="show-more-video-info">
+										</button>
+									</div>
+									<hr>
+									<div class="video-views">
+										<div class="video-views-counter">
+											<!-- Views <b>15 632</b>
+											<br> -->
+											• Online <b>1203</b>
+										</div>
+										<div class="video-likes">
+											<div class="like-dislike">
+												<button class="btn-like">
+													<span class="count">1420</span>
+												</button><button class="btn-dislike">
+													<span class="count">52</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="video-about-addition-block">
+										<div class="video-description">
+											<div class="flyer-img">
+												<img src="images/flyer.jpg">
+											</div>
+										</div>
+										<div class="video-info">
+											Published <b>Mar 12, 2015</b> &emsp; Category <b><a href="#">Club</a></b>
+										</div>
+									</div>
+								</div>
+								<div class="video-additional-content">
+									<div class="toggle-group">
+										<button type="button" class="toggle-item toggle-btn-1 active">Videos</button><button type="button" class="toggle-item toggle-btn-2">People</button><button type="button" class="toggle-item toggle-btn-3">About</button><button type="button" class="toggle-item toggle-btn-4">Games 〉</button>
+									</div>
+									<div class="toggle-content-box">
+										<div class="toggle-content-1 active">
+											<div class="aside-video-list">
+												<div class="video-item">
+													<a href="broadcast_videos.html" class="video-link">
+														<div class="video-item-preview">
+															<img src="images/video-preview-1.png">
+														</div>
+														<div class="video-item-about">
+															<div class="video-item-title" title="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using">
+																The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+															</div>
+															<div class="video-item-addition">
+																by <b>Author Name</b>
+																<br>
+																Views <b>32 564</b>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="video-item">
+													<a href="broadcast_videos.html" class="video-link">
+														<div class="video-item-preview">
+															<img src="images/video-preview-2.png">
+														</div>
+														<div class="video-item-about">
+															<div class="video-item-title">
+																Video clip name
+															</div>
+															<div class="video-item-addition">
+																by <b>Author Name</b>
+																<br>
+																Views <b>1 564</b>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="video-item">
+													<a href="broadcast_videos.html" class="video-link">
+														<div class="video-item-preview">
+															<img src="images/video-preview-3.png">
+														</div>
+														<div class="video-item-about">
+															<div class="video-item-title">
+																Video clip name
+															</div>
+															<div class="video-item-addition">
+																by <b>Author Name</b>
+																<br>
+																Views <b>12 252</b>
+															</div>
+														</div>
+													</a>
+												</div>
+											</div>
+											<hr class="hr-dot">
+											<div class="more-block">
+												<button type="button">
+													Show more videos
+												</button>
+											</div>
+										</div>
+
+										<div class="aside-user-list toggle-content-2">
+											<div class="user-item online">
+												<a href="message-page.html" class="user-link">
+													<div class="user-img">
+														<img src="images/user-1.jpg">
+													</div>
+												</a>
+											</div><div class="user-item online">
+												<a href="message-page.html" class="user-link">
+													<div class="user-img">
+														<img src="images/user-2.jpg">
+													</div>
+												</a>
+											</div>
+										</div>
+
+										<div class="aside-about-list toggle-content-3">
+											<div class="about-decsription">
+												<p>
+													Party Club has a big variety of night life whether its, Pubs, Discos, restaurants huge partys among the deserts with the best DJ's or entertainmant team in the hotels (for the solid people who rather not go out).
+												</p>
+												<p>
+													Sunset — The Sound of PARTY CLUB: Every Friday & Saturday from 14:00
+												</p>
+											</div>
+											<h3 class="border-b">Contacts</h3>
+											<div class="about-contacts">
+												<p>
+													Phone: <strong>972-3-9412210</strong>
+												</p>
+												<p>
+													Website: <a href="#"><strong>www.party-club.il</strong></a>
+												</p>
+												<p>
+													Email: <a href="#"><strong>mailbox@party-club.il</strong></a>
+												</p>
+												<p>
+													Adress: <strong>23 Yaakov Mozer street, Tel Aviv, Israel</strong>
+												</p>
+											</div>
+											<div class="about-map">
+												<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.2316455424298!2d34.785584199999995!3d32.090024500000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4bed530b0a6d%3A0x651a12e85707865d!2zWWEnYWtvdiBNb3plciBTdCAyMywgVGVsIEF2aXYtWWFmbywg0JjQt9GA0LDQuNC70Yw!5e0!3m2!1sru!2sua!4v1435215078035" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comments-box" id="comment-list">
+									<div class="comments-header">
+										<div class="title">
+											comments
+										</div>
+										<div class="video-about-showmore">
+											<a href="#comment-list">
+												<button class="btn-showmore" id="show-more-comments">
+												</button>
+											</a>
+										</div>
+									</div>
+									<div class="comments-list">
+										<div class="comments-input-box">
+											<div class="comments-sign-in">
+												<div class="comments-user-icon">
+													<img src="images/user-1.jpg">
+												</div>
+												<div class="comments-content">
+													<textarea class="comment-textarea" placeholder="Write your comment here.."></textarea>
+													<div class="comments-textarea-controls">
+														<button type="button" class="comments-send-button">
+															Post
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="comments-main">
+											<div class="comments-item">
+												<div class="comments-user-icon">
+													<img src="images/user-1.jpg">
+												</div>
+												<div class="comments-content">
+													<div class="comments-user-name">
+														<a href="#">Rembo</a> <span class="t-date">17:55</span>
+													</div>
+													<div class="comments-text">
+														User comment text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+													</div>
+													<div class="comments-replay-btn">
+														<a href="#">Replay</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<hr class="hr-dot">
+										<div class="more-block">
+											<button type="button">
+												Show more comments
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //END BROADCASTS VIDEO PAGE -->
+
+						</div>
+						<!-- //end slide 2 / adult only -->
+
+
+						<!-- slide 3 / adult only -->
+						<div class="swiper-slide">ADULT ONLY!!!!!!!!!GROW UP!</div>
+						<!-- //end slide 3 / adult only -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- !!! END MAIN PAGE !!! -->
+
+
+
+	<!-- !!! MESSAGE LIST PAGE !!! -->
+	<div id="message-page" style="display: none;">
+		<div class="header">
+			<div class="back-btn">
+				<button onclick="window.history.back();"><small>Back</small></button>
+			</div>
+			<div class="header-nav">
+				<button class="user-btn" id="user-nav-btn">
+					<!-- <span class="label-ciscle">3</span> -->
+					<img src="images/user-4.jpg">
+				</button>
+			</div>
+			<div class="title">
+				Messages <b>14</b>
+			</div>
+		</div>
+
+		<div class="popup-cover"></div>
+
+		<div class="popup popup-user-nav">
+			<ul>
+				<li class="title">
+					User name
+				</li>
+				<li class="toggle-check">
+					<input type="checkbox" class="check-btn" id="check-btn" />
+					<label for="check-btn">
+						<span>Insaider</span>
+					</label>
+				</li>
+				<hr>
+				<li>
+					<a href="message.html">
+						Message
+						<span class="label-circle">8</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						My profile
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Settings
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						About SeeYou
+					</a>
+				</li>
+				<hr>
+				<li>
+					<a class="logout" href="index.html">
+						Sign out
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="container top-margin message-user-container">
+			<div class="user-item online">
+				<a href="message-page.html" class="user-link">
+					<div class="user-img">
+						<img src="images/user-1.jpg">
+						<span class="label-circle">2</span>
+					</div>
+				</a>
+			</div><div class="user-item online">
+				<a href="message-page.html" class="user-link">
+					<div class="user-img">
+						<img src="images/user-2.jpg">
+						<span class="label-circle">1</span>
+					</div>
+				</a>
+			</div><div class="user-item online">
+				<a href="message-page.html" class="user-link">
+					<div class="user-img">
+						<img src="images/user-3.jpg">
+						<span class="label-circle">2</span>
+					</div>
+				</a>
+			</div><div class="user-item online">
+				<a href="message-page.html" class="user-link">
+					<div class="user-img">
+						<img src="images/user-4.jpg">
+						<span class="label-circle">3</span>
+					</div>
+				</a>
+			</div><div class="user-item online">
+				<a href="message-page.html" class="user-link">
+					<div class="user-img">
+						<img src="images/user-5.jpg">
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- !!! END MESSAGE LIST PAGE !!! -->
+
+
+
+	<!-- !!! CHAT PAGE !!! -->
+	<div id="chat-page" style="display: none;">
+		<div class="header">
+			<div class="back-btn">
+				<button type="button"><small>Back</small></button>
+			</div>
+			<div class="header-nav">
+				<img class="message-user" src="images/user-5.jpg">
+			</div>
+			<div class="title">
+				Nataly
+			</div>
+		</div>
+
+		<div class="popup-cover"></div>
+
+		<div class="popup popup-user-nav">
+			<ul>
+				<li class="title">
+					User name
+				</li>
+				<li class="toggle-check">
+					<input type="checkbox" class="check-btn" id="check-btn" />
+					<label for="check-btn">
+						<span>Insaider</span>
+					</label>
+				</li>
+				<hr>
+				<li>
+					<a href="message.html">
+						Message
+						<span class="label-circle">3</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						My profile
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Settings
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						About SeeYou
+					</a>
+				</li>
+				<hr>
+				<li>
+					<a class="logout" href="index.html">
+						Sign out
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="chat-box">
+			<div class="message">
+				Hello! How you doing?
+			</div>
+			<div class="message inbox">
+				It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+			</div>
+			<div class="message">
+				Hello! How you doing?
+			</div>
+			<div class="message inbox">
+				Hello! How you doing?
+			</div>
+			<div class="message">
+				Hello! How you doing?
+			</div>
+			<div class="message inbox">
+				It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+			</div>
+			<div class="message">
+				Hello! How you doing?
+			</div>
+			<div class="message inbox">
+				Hello! How you doing?
+			</div>
+			<div class="message">
+				Hello! How you doing?
+			</div>
+			<div class="message inbox">
+				It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+			</div>
+			<div class="message">
+				Hello! How you doing?
+			</div>
+			<div class="message inbox">
+				Hello! How you doing?
+			</div>
+		</div>
+
+		<div class="chat-bar">
+			<div class="smiles-menu">
+				☻
+			</div>
+			<div class="chat-send">
+				<button class="send-btn">
+					Send
+				</button>
+			</div>
+			<div class="chat-input">
+				<input type="text" placeholder="Type your message..">
+			</div>
+		</div>
+	</div>
+	<!-- !!! END CHAT PAGE !!! -->
+
+
+
+	<!-- !!! UPLOAD PAGE !!! -->
+	<div id="upload-page" style="display: none;">
+		<div class="header">
+			<div class="back-btn">
+				<button onclick="window.history.back();"><small>Back</small></button>
+			</div>
+			<div class="header-nav">
+				<button class="user-btn" id="user-nav-btn">
+					<span class="label-ciscle">8</span>
+					<img src="images/user-4.jpg">
+				</button>
+			</div>
+			<div class="title">
+				Upload video
+			</div>
+		</div>
+
+		<div class="popup-cover"></div>
+
+		<div class="popup popup-user-nav">
+			<ul>
+				<li class="title">
+					User name
+				</li>
+				<li class="toggle-check">
+					<input type="checkbox" class="check-btn" id="check-btn" />
+					<label for="check-btn">
+						<span>Insaider</span>
+					</label>
+				</li>
+				<hr>
+				<li>
+					<a href="message.html">
+						Message
+						<span class="label-circle">3</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						My profile
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Settings
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						About SeeYou
+					</a>
+				</li>
+				<hr>
+				<li>
+					<a class="logout" href="index.html">
+						Sign out
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="upload-block">
+			<label class="upload-big-btn">
+				<input type="file">
+				<div class="upload-text">
+					<span class="btn">Select file to upload</span>
+				</div>
+			</label>
+			<p>
+				<input type="text" class="input-all" placeholder="Type title of video">
+			</p>
+			<p>
+				<textarea class="input-all" style="height: 80px" placeholder="Description for video"></textarea>
+			</p>
+			<p>
+				<span style="display: inline-block; width: 205px">Video category &nbsp;</span>
+				<select style="width: 100%;">
+					<option>
+						Select category
+					</option>
+					<option>
+						Category 1
+					</option>
+					<option>
+						Category 2
+					</option>
+					<option>
+						Category 3
+					</option>
+					<option>
+						Category 4
+					</option>
+				</select>
+			</p>
+			<p>
+				<label style="display: inline-block; width: 205px">
+					<input class="phone-notification" type="checkbox"> SMS notification
+				</label>
+				<input type="text" placeholder="Phone number">
+			</p>
+			<br>
+			<p>
+				<label>
+					<input type="checkbox"> I agree to SeeYou's Terms of Use
+				</label>
+			</p>
+			<p class="t-center">
+				<button class="green-btn btn-big">Upload video</button>
+			</p>
+		</div>
+	</div>
+	<!-- !!! END UPLOAD PAGE !!! -->
+
+
+	<script src="js/swiper.js"></script>
+
+		<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			spaceBetween: 0,
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			touches: pageStartX = 500
+		});
+	</script>
+
+
+	<script src="js/snap.js"></script>
+
+	<!-- Initiakize Snap -->
+
+	<script>
+		var snapper = new Snap({
+			element: document.getElementById('left-nav-btn'),
+			disable: 'right'
+		});
+	</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</body>
+</html>

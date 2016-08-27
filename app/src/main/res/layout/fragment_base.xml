@@ -1,0 +1,32 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    tools:context="com.aleksandrp.seeyou.about_app.fragment.BaseFragment">
+
+    <TextView
+        android:id="@+id/title_base_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/midl_size"
+        android:layout_marginTop="@dimen/midl_size"
+        android:gravity="center_horizontal"
+        android:text="@string/hello_blank_fragment"
+        android:textSize="@dimen/big_size"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_base_fragment">
+
+        <TextView
+            android:id="@+id/tv_description_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+
+</RelativeLayout>

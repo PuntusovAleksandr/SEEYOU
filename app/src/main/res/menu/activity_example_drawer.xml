@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_contacts"
+            android:title="@string/contacts"/>
+        <item
+            android:id="@+id/nav_about"
+            android:title="@string/about"/>
+        <item
+            android:id="@+id/nav_cooperation"
+            android:title="@string/cooperation"/>
+        <item
+            android:id="@+id/nav_terms_of_use"
+            android:title="@string/terms_of_use"/>
+        <item
+            android:id="@+id/nav_confidentiality"
+            android:title="@string/confidentiality"/>
+        <item
+            android:id="@+id/nav_help"
+            android:title="@string/help"/>
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share"/>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send"/>-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

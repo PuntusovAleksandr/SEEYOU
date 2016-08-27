@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0; user-scalable=0; user-scalable=no">
+<title>Title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="style/ghost.css">
+<link rel="stylesheet" href="style/css.css">
+<link rel="shortcut icon" href="../favicon.ico">
+<script src="js/jquery-latest.js"></script>
+<script src="js/toggle.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/storage.js"></script>
+	<script src="js/apiFunctions.js"></script>
+	<script src="js/upload.js"></script>
+</head>
+
+<body onload="getVideoCategories()">
+	<div class="header">
+		<div class="back-btn">
+			<button onclick="window.history.back();"><small>Back</small></button>
+		</div>
+		<div class="header-nav">
+			<button class="user-btn" id="user-nav-btn">
+				<span class="label-ciscle">8</span>
+				<img class="storageSrc" data-storage="userAvatar" src="">
+			</button>
+		</div>
+		<div class="title">
+			Upload video
+		</div>
+	</div>
+
+	<div class="popup-cover"></div>
+
+	<div class="popup popup-user-nav">
+		<ul>
+			<li class="title">
+				User name
+			</li>
+			<li class="toggle-check">
+				<input type="checkbox" class="check-btn" id="check-btn" />
+				<label for="check-btn">
+					<span>Insaider</span>
+				</label>
+			</li>
+			<hr>
+			<li>
+				<a href="message.html">
+					Message
+					<span class="label-circle">3</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					My profile
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Settings
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					About SeeYou
+				</a>
+			</li>
+			<hr>
+			<li>
+				<a class="logout" href="index.html">
+					Sign out
+				</a>
+			</li>
+		</ul>
+	</div>
+<form id="video-upload">
+	<div class="upload-block">
+		<label class="upload-big-btn">
+			<input type="file">
+			<div class="upload-text">
+				<span class="btn">Select file to upload</span>
+			</div>
+		</label>
+		<p class="" id="message">
+
+		</p>
+		<p>
+			<input type="hidden" class="storageVal" data-storage="userId" name="user_id" value="">
+			<input type="text" name="title" class="input-all" placeholder="Type title of video">
+		</p>
+		<p>
+			<textarea class="input-all" name="description" style="height: 80px" placeholder="Description for video"></textarea>
+		</p>
+		<p>
+			<span style="display: inline-block; width: 205px">Video category &nbsp;</span>
+			<select name="category" class="videoCategoriesSelect" style="width: 100%;">
+				<option>
+					Select category
+				</option>
+			</select>
+		</p>
+		<p>
+			<label style="display: inline-block; width: 205px">
+				<input class="phone-notification" type="checkbox"> SMS notification
+			</label>
+			<input type="text" placeholder="Phone number">
+		</p>
+		<br>
+		<p>
+			<label>
+				<input type="checkbox"> I agree to SeeYou's Terms of Use
+			</label>
+		</p>
+		<p class="t-center">
+			<button type="submit" class="green-btn btn-big">Upload video</button>
+		</p>
+	</div>
+</form>
+
+</body>
+</html>

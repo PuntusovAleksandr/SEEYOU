@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0; user-scalable=0; user-scalable=no">
+<title>Title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="style/ghost.css">
+<link rel="stylesheet" href="style/css.css">
+<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" href="style/snap.css">
+<!--<link rel="stylesheet" href="style/swiper.min.css">-->
+<script src="js/jquery-latest.js"></script>
+<script src="js/toggle.js"></script>
+<script src="js/jquery.mobile.custom.js"></script>
+</head>
+
+<body>
+	<div class="broadcast-page">
+	<div class="header">
+		<div class="header-logo">
+			<img src="images/logo_w.png">
+		</div>
+		<div class="header-nav">
+			<a href="#" class="icon icon-search"></a>
+			<a href="upload.html" class="icon icon-upload"></a>
+			<button class="user-btn" id="user-nav-btn">
+				<span class="label-ciscle">3</span>
+				<img src="images/user-4.jpg">
+			</button>
+		</div>
+	</div>
+	<div class="popup-cover"></div>
+	<div class="popup popup-user-nav">
+		<ul>
+			<li class="title">
+				User name
+			</li>
+			<li class="toggle-check">
+				<input type="checkbox" class="check-btn" id="check-btn" />
+				<label for="check-btn">
+					<span>Insaider</span>
+				</label>
+			</li>
+			<hr>
+			<li>
+				<a href="message.html">
+					Message
+					<span class="label-circle">8</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					My profile
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Settings
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					About SeeYou
+				</a>
+			</li>
+			<hr>
+			<li>
+				<a class="logout" href="index.html">
+					Sign out
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="main-nav">
+		<a href="#" class="sub-nav-btn" id="sub-nav-btn">— — —</a>
+		<a href="videoselfie.html">Videoselfie</a>
+		<a href="broadcast.html" class="active">Broadcasts</a>
+		<a href="#">Adult only</a>
+	</div>
+
+	<div id="swipe-leftnav" class="snap-drawer snap-drawer-left" dir="rtl" >
+			<div class="swiper-slide popup-slide" >
+				<div class="popup">
+					<ul class="nav-group">
+						<li>
+							<a href="" class="nav-item">Online now <span class="online-state">•</span></a>
+						</li>
+					</ul>
+					<hr class="hr-dot">
+					<ul class="nav-group">
+						<!-- <div class="nav-group-title">
+							Videos by regions
+						</div> -->
+						<li>
+							<!-- <a href="" class="nav-item nav-popup-link">North chanel</a> -->
+							<ul class="sub-nav-group">
+								<li>
+									<a href="broadcast.html" class="sub-nav-item">Club</a>
+								</li>
+								<li>
+									<a href="broadcast.html" class="sub-nav-item">Bar</a>
+								</li>
+								<li>
+									<a href="broadcast.html" class="sub-nav-item">Restoraunt</a>
+								</li>
+								<li>
+									<a href="broadcast.html" class="sub-nav-item">Ballrooms</a>
+								</li>
+								<li>
+									<a href="broadcast.html" class="sub-nav-item">Theaters</a>
+								</li>
+								<li>
+									<a href="broadcast.html" class="sub-nav-item">Stadium</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<hr class="hr-dot">
+					<ul class="nav-group">
+						<li>
+							<a href="" class="nav-item">By cities</a>
+						</li>
+						<li>
+							<a href="" class="nav-item">More categories</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+	<div class="container main-container" id="content">
+		<!-- <div class="toggle-group">
+            <a href="#a-videos-top"><button type="button" class="toggle-item toggle-btn-1 active">Videos</button></a><a href="#a-people-top"><button type="button" class="toggle-item toggle-btn-2">People</button></a><a href="#a-about-top"><button type="button" class="toggle-item toggle-btn-3">About</button></a><a href=""><button type="button" class="toggle-item toggle-btn-4">Games 〉</button></a>
+        </div> -->
+		<div class="swiper-slide">
+			<div></div>
+		</div>
+		<div class="toggle-content-1 active" id="no-drag" data-snap-ignore="true">
+			<div class="aside-video-list">
+				<div class="video-item">
+					<a href="broadcast_videos.html" class="video-link">
+						<div class="video-item-preview">
+							<img src="images/video-preview-1.png">
+						</div>
+						<div class="video-item-about">
+							<div class="video-item-title" title="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using">
+								The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+							</div>
+							<div class="video-item-addition">
+								by <b>Author Name</b>
+								<br>
+								Views <b>32 564</b>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="video-item">
+					<a href="broadcast_videos.html" class="video-link">
+						<div class="video-item-preview">
+							<img src="images/video-preview-2.png">
+						</div>
+						<div class="video-item-about">
+							<div class="video-item-title">
+								Video clip name
+							</div>
+							<div class="video-item-addition">
+								by <b>Author Name</b>
+								<br>
+								Views <b>1 564</b>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="video-item">
+					<a href="broadcast_videos.html" class="video-link">
+						<div class="video-item-preview">
+							<img src="images/video-preview-3.png">
+						</div>
+						<div class="video-item-about">
+							<div class="video-item-title">
+								Video clip name
+							</div>
+							<div class="video-item-addition">
+								by <b>Author Name</b>
+								<br>
+								Views <b>12 252</b>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="video-item">
+					<a href="broadcast_videos.html" class="video-link">
+						<div class="video-item-preview">
+							<img src="images/video-preview-4.png">
+						</div>
+						<div class="video-item-about">
+							<div class="video-item-title">
+								Video clip name
+							</div>
+							<div class="video-item-addition">
+								by <b>Author Name</b>
+								<br>
+								Views <b>3 254</b>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="video-item">
+					<a href="broadcast_videos.html" class="video-link">
+						<div class="video-item-preview">
+							<img src="images/video-preview-5.png">
+						</div>
+						<div class="video-item-about">
+							<div class="video-item-title">
+								Video clip name
+							</div>
+							<div class="video-item-addition">
+								by <b>Author Name</b>
+								<br>
+								Views <b>12 564</b>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<hr class="hr-dot">
+			<div class="more-block">
+				<button type="button">
+					Show more videos
+				</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+	<!--<script src="js/swiper.js"></script>-->
+	<script src="js/snap.js"></script>
+	<script>
+		/*var swiper = new Swiper('.swiper-container', {
+			spaceBetween: 30,
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+		});*/
+		var snapper = new Snap({
+			element: document.getElementById('content')
+		});
+	</script>
+</body>
+</html>
