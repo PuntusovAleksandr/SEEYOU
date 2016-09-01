@@ -3,178 +3,169 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@android:color/white"
                 android:orientation="vertical"
-                tools:background="@drawable/bc"
                 tools:context=".login.LoginActivity">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="@dimen/activity_horizontal_margin"
-                    android:background="@android:color/white"
-                    android:orientation="vertical"
-                    tools:context=".login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_main_icon_login"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="3"
+        android:background="@color/color_bg_green"
+        android:src="@drawable/logo_lit_512"/>
 
 
-        <ImageView
-            android:id="@+id/iv_main_icon_login"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_weight="3"
-            android:background="@color/color_bg_green"
-            android:src="@drawable/logo_lit_512"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_center_login"
+        android:layout_below="@+id/iv_main_icon_login"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:gravity="center"
+            android:text="@string/sign_in_via_social_account"
+            android:textColor="@color/color_text_title"
+            android:textSize="@dimen/x_8"/>
+
+        <include layout="@layout/layout_social_networks"/>
+
+        <TextView
+            android:id="@+id/tv_center_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_weight="1"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:gravity="center"
+            android:text="@string/or_via_email"
+            android:textColor="@color/color_text_title"
+            android:textSize="@dimen/x_8"/>
+
+    </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/view_center_login"
-            android:layout_below="@+id/iv_main_icon_login"
-            android:layout_centerInParent="true"
-            android:orientation="vertical">
+    <View
+        android:id="@+id/view_center_login"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:layout_weight="1"
-                android:fontFamily="ARIMO-BOLD.ttf"
-                android:gravity="center"
-                android:text="@string/sign_in_via_social_account"
-                android:textColor="@color/color_text_title"
-                android:textSize="@dimen/x_8"/>
+    <LinearLayout
+        android:id="@+id/ll_edite_text_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_sign_in"
+        android:layout_below="@+id/view_center_login"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
-            <include layout="@layout/layout_social_networks"/>
-
-            <TextView
-                android:id="@+id/tv_center_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/small_margin"
-                android:layout_weight="1"
-                android:fontFamily="ARIMO-BOLD.ttf"
-                android:gravity="center"
-                android:text="@string/or_via_email"
-                android:textColor="@color/color_text_title"
-                android:textSize="@dimen/x_8"/>
-
-        </LinearLayout>
-
-
-        <View
-            android:id="@+id/view_center_login"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_centerInParent="true"/>
-
-        <LinearLayout
-            android:id="@+id/ll_edite_text_login"
+        <EditText
+            android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/ll_sign_in"
-            android:layout_below="@+id/view_center_login"
-            android:layout_centerInParent="true"
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/et_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="@dimen/small_margin"
-                android:fontFamily="ARIMO-BOLD.ttf"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress"
-                android:textSize="@dimen/x_5"/>
-
-
-            <EditText
-                android:id="@+id/et_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/activity_horizontal_margin"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:fontFamily="ARIMO-BOLD.ttf"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:textSize="@dimen/x_5"/>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/ll_sign_in"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_above="@+id/rl_press_registration"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin">
+            android:layout_marginTop="@dimen/small_margin"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/x_5"/>
 
-            <Button
-                android:id="@+id/bt_sign_in"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:background="@drawable/bbut_normal"
-                android:fontFamily="ARIMO-BOLD.ttf"
-                android:gravity="center"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:text="@string/sign_in"
-                android:textColor="@color/dark"
-                android:textSize="@dimen/x_7"/>
-        </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/rl_press_registration"
+        <EditText
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textSize="@dimen/x_5"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_above="@+id/rl_press_registration"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <Button
+            android:id="@+id/bt_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@drawable/bbut_normal"
+            android:fontFamily="ARIMO-BOLD.ttf"
             android:gravity="center"
-            android:paddingLeft="@dimen/activity_vertical_margin"
-            android:paddingRight="@dimen/activity_vertical_margin"
-            android:text="@string/registration">
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/sign_in"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/x_7"/>
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_registration"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:fontFamily="ARIMO-BOLD.ttf"
-                android:gravity="center"
-                android:text="@string/registration"
-                android:textColor="@color/color_bg_green"
-                android:textSize="@dimen/x_7"/>
+    <RelativeLayout
+        android:id="@+id/rl_press_registration"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:text="@string/registration">
 
-            <!--<ImageView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_toEndOf="@+id/tv_registration"-->
-            <!--android:layout_toRightOf="@+id/tv_registration"-->
-            <!--android:src="@drawable/right_white_36px"/>-->
+        <TextView
+            android:id="@+id/tv_registration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:gravity="center"
+            android:text="@string/registration"
+            android:textColor="@color/color_bg_green"
+            android:textSize="@dimen/x_7"/>
 
-        </RelativeLayout>
-
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_toEndOf="@+id/tv_registration"-->
+        <!--android:layout_toRightOf="@+id/tv_registration"-->
+        <!--android:src="@drawable/right_white_36px"/>-->
 
     </RelativeLayout>
+
+
 </RelativeLayout>
