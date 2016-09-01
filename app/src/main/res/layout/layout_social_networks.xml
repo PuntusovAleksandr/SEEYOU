@@ -12,7 +12,7 @@
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/ib_google"
         android:background="@android:color/transparent"
-        android:src="@drawable/facebook_logo48"/>
+        android:src="@drawable/select_facebook_logo48"/>
 
 
     <ImageButton
@@ -24,7 +24,7 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:background="@android:color/transparent"
-        android:src="@drawable/google_logo48"/>
+        android:src="@drawable/select_google_logo48"/>
 
 
     <ImageButton
@@ -35,7 +35,7 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/ib_google"
         android:background="@android:color/transparent"
-        android:src="@drawable/twitter_logo48"/>
+        android:src="@drawable/select_twitter_logo48"/>
 
     <com.twitter.sdk.android.core.identity.TwitterLoginButton
         android:id="@+id/twitter_login_button"

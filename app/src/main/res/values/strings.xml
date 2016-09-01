@@ -3,9 +3,9 @@
 
 
     <string name="app_name">SEEYOU</string>
-    <string name="registration">REGISTRATION</string>
-    <string name="sign_in_via_social_account">Sign in via social account</string>
-    <string name="or_via_email">or via email</string>
+    <string name="registration">Registration</string>
+    <string name="sign_in_via_social_account">Sign Un via social network</string>
+    <string name="or_via_email">Or via email</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="sign_in">SIGN IN</string>
@@ -42,7 +42,7 @@
     <string name="phone_number">Phone number</string>
     <string name="i_agree_to_seeyou_sterms_of_use">I agree to SeeYou\'sTerms of Use</string>
     <string name="upload_video_bt">UPLOAD VIDEO</string>
-    <string name="sign_up_via_social_network">Sign up via social network</string>
+    <string name="sign_up_via_social_network">Sign Up via social network</string>
     <string name="n_nyour_friends_will_not">\n\nYour friends will not know that yuo are logged in SeeYou. We do not publish any information in you social network</string>
     <string name="the_next_time_you">The next time you enter the site, use the login we the selected social network</string>
     <string name="name">Name</string>
@@ -644,4 +644,5 @@
     <string name="enter_your_comment">Enter your comment</string>
     <string name="enter_text">Enter text comment</string>
     <string name="you_need_register_and_buy_service">\tYou need register and buy service</string>
+    <string name="register_with_thr_e_mail">Register with thr e-mail</string>
 </resources>

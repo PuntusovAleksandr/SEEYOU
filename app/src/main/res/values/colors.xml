@@ -15,4 +15,7 @@
     <color name="color_bg_green">#5bcd21</color>
     <color name="color_green">#70ff27</color>
     <color name="color_red">#ff2727</color>
+
+
+    <color name="color_text_title">#555555</color>
 </resources>

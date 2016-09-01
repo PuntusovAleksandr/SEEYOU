@@ -27,7 +27,6 @@
             android:src="@drawable/logo_lit_512"/>
 
 
-
         <RelativeLayout
             android:id="@+id/rl_back"
             android:layout_width="wrap_content"
@@ -77,19 +76,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:gravity="center"
                     android:text="@string/sign_up_via_social_network"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/big_size"/>
+                    android:textColor="@color/color_text_title"
+                    android:textSize="@dimen/x_8"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/midle_size_text"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:gravity="center"
                     android:text="@string/n_nyour_friends_will_not"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/color_text_title"
+                    android:textSize="@dimen/x_5"/>
 
                 <include layout="@layout/content_registering"/>
 
@@ -98,17 +99,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/midle_size_text"
                     android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:gravity="center"
                     android:text="@string/the_next_time_you"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/color_text_title"
+                    android:textSize="@dimen/x_5"/>
 
             </LinearLayout>
 
             <!--<View-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="1dp"-->
-                <!--android:background="@color/cardview_dark_background"/>-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="@color/cardview_dark_background"/>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -122,42 +124,55 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:gravity="center"
-                    android:text="Register via mail"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/big_size"/>
+                    android:text="@string/register_with_thr_e_mail"
+                    android:textColor="@color/color_text_title"
+                    android:textSize="@dimen/x_8"/>
 
                 <EditText
                     android:id="@+id/et_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/midle_size_text"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:hint="@string/name"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:textColor="@color/color_text_title"
+                    android:textSize="@dimen/x_5"/>
 
                 <EditText
                     android:id="@+id/et_surname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/midle_size_text"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:hint="@string/surname"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:textColor="@color/color_text_title"
+                    android:textSize="@dimen/x_5"/>
 
                 <EditText
                     android:id="@+id/et_create_mail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/midle_size_text"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:hint="@string/email"
-                    android:inputType="textEmailAddress"/>
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/color_text_title"
+                    android:textSize="@dimen/x_5"/>
 
                 <EditText
                     android:id="@+id/et_create_pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/midle_size_text"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:hint="@string/create_password"
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:textColor="@color/color_text_title"
+                    android:textSize="@dimen/x_5"/>
 
 
                 <CheckBox
@@ -166,7 +181,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/activity_horizontal_margin"
-                    android:text="@string/i_agree_to_seeyou_sterms_of_use"/>
+                    android:fontFamily="ARIMO-BOLD.ttf"
+                    android:text="@string/i_agree_to_seeyou_sterms_of_use"
+                    android:textColor="@color/color_text_title"
+                    android:textSize="@dimen/x_5"/>
 
                 <Button
                     android:id="@+id/bt_register_register_activity"
@@ -174,10 +192,12 @@
                     android:layout_height="?attr/actionBarSize"
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_marginBottom="@dimen/activity_horizontal_margin"
-                    android:background="@drawable/button_signin_bg"
+                    android:background="@drawable/bbut_normal"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:gravity="center"
-                    android:text="@string/registration"
-                    android:textColor="@android:color/black"/>
+                    android:text="@string/sign_in"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x_7"/>
 
             </LinearLayout>
 

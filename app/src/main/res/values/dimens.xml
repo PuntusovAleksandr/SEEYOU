@@ -14,4 +14,10 @@
     <dimen name="small_size_text">10sp</dimen>
     <dimen name="size_liks">22sp</dimen>
     <dimen name="size_fragment">480dp</dimen>
+    <dimen name="x_45">45sp</dimen>
+    <dimen name="x_9">34sp</dimen>
+    <dimen name="x_8">24sp</dimen>
+    <dimen name="x_7">20sp</dimen>
+    <dimen name="x_5">16sp</dimen>
+    <dimen name="x_4">14sp</dimen>
 </resources>
