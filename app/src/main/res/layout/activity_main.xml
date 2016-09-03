@@ -9,6 +9,7 @@
     tools:context=".main.MainActivity">
 
     <RelativeLayout
+        android:id="@+id/Rl_tool_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/color_bg_green"
@@ -41,63 +42,124 @@
             android:background="@android:color/transparent"
             android:src="@drawable/add_file"/>
 
-        <include layout="@layout/icon_profile"
-            android:id="@+id/icon_user_ll"/>
+        <include
+            android:id="@+id/icon_user_ll"
+            layout="@layout/icon_profile"/>
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/rl_show_all"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize">
+        android:layout_height="match_parent">
 
-
-        <android.support.design.widget.CoordinatorLayout
-            android:id="@+id/coordinator"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            tools:context=".main.StartActivity">
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/_midl_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:gravity="center"
+            android:text="@string/welcome"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x_8"/>
 
-            <android.support.v4.view.ViewPager
-                android:id="@+id/pager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="?attr/actionBarSize"/>
+        <TextView
+            android:id="@+id/_midl_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bt_go"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:gravity="center"
+            android:text="@string/you_have_registered_on_seeyou_space"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x_5"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/light_green"
-                android:orientation="horizontal">
+        <View
+            android:id="@+id/view_center_main_go"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"/>
 
-                <ImageView
-                    android:id="@+id/iv_list_blank"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="8"
-                    android:padding="@dimen/small_margin"
-                    android:src="@drawable/ic_list_black"/>
-
-                <android.support.design.widget.TabLayout
-                    android:id="@+id/tab_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    app:tabBackground="@color/light_green"
-                    app:tabIndicatorColor="@color/color_bg_green"
-                    app:tabSelectedTextColor="@color/color_bg_green"
-                    app:tabTextColor="@android:color/black"/>
-
-            </LinearLayout>
-
-        </android.support.design.widget.CoordinatorLayout>
-
+        <Button
+            android:id="@+id/bt_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_center_main_go"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/bbut_normal"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:gravity="center"
+            android:text="@string/go"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/x_7"/>
 
     </RelativeLayout>
 
-    <include layout="@layout/left_bar_layout"/>
+    <RelativeLayout
+        android:id="@+id/rl_no_show_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
-    <include layout="@layout/settings_profile_fragment"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
+
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/coordinator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                tools:context=".main.StartActivity">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?attr/actionBarSize"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/light_green"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_list_blank"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/ic_list_black"/>
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:tabBackground="@color/light_green"
+                        app:tabIndicatorColor="@color/color_bg_green"
+                        app:tabSelectedTextColor="@color/color_bg_green"
+                        app:tabTextColor="@android:color/black"/>
+
+                </LinearLayout>
+
+            </android.support.design.widget.CoordinatorLayout>
+
+
+        </RelativeLayout>
+
+        <include layout="@layout/left_bar_layout"/>
+
+        <include layout="@layout/settings_profile_fragment"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>

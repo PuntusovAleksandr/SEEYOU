@@ -23,7 +23,7 @@ public class SettingsApp {
     private static final String KEY_USER_NAME = "KEY_USER_NAME";
     private static final String KEY_USER_AVA = "KEY_USER_AVA";
     private static final String KEY_USER_ADULT = "KEY_USER_ADULT";
-
+    private static final String KEY_GREETING = "show_first_title";
 
 
     /**
@@ -40,6 +40,7 @@ public class SettingsApp {
 
     /**
      * get user email for check registered
+     *
      * @param preferences
      * @return
      */
@@ -62,6 +63,7 @@ public class SettingsApp {
 
     /**
      * get user password for check registered
+     *
      * @param preferences
      * @return
      */
@@ -84,6 +86,7 @@ public class SettingsApp {
 
     /**
      * get user id for check registered
+     *
      * @param preferences
      * @return
      */
@@ -106,6 +109,7 @@ public class SettingsApp {
 
     /**
      * get user name for check registered
+     *
      * @param preferences
      * @return
      */
@@ -128,6 +132,7 @@ public class SettingsApp {
 
     /**
      * get user avatar for check registered
+     *
      * @param preferences
      * @return
      */
@@ -138,6 +143,7 @@ public class SettingsApp {
 
     /**
      * set user adult for check registered
+     *
      * @param adult
      * @param preferences
      */
@@ -149,11 +155,35 @@ public class SettingsApp {
 
     /**
      * get user adult for check registered
+     *
      * @param preferences
      * @return
      */
     public static boolean getAdult(SharedPreferences preferences) {
         return preferences.getBoolean(KEY_USER_ADULT, DEF_BOOL);
+    }
+
+
+    /**
+     * SET GREETING
+     *
+     * @param adult
+     * @param preferences
+     */
+    public static void setGreeting(boolean adult, SharedPreferences preferences) {
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean(KEY_GREETING, adult);
+        editor.commit();
+    }
+
+    /**
+     * GET GREETING
+     *
+     * @param preferences
+     * @return
+     */
+    public static boolean getGreeting(SharedPreferences preferences) {
+        return preferences.getBoolean(KEY_GREETING, true);
     }
 
 

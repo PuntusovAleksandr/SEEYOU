@@ -645,4 +645,7 @@
     <string name="enter_text">Enter text comment</string>
     <string name="you_need_register_and_buy_service">\tYou need register and buy service</string>
     <string name="register_with_thr_e_mail">Register with thr e-mail</string>
+    <string name="welcome">WELCOME!</string>
+    <string name="you_have_registered_on_seeyou_space">You have registered on SEEYOU space.</string>
+    <string name="go">GO!</string>
 </resources>

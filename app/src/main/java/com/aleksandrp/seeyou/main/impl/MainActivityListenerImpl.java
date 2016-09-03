@@ -48,6 +48,8 @@ public class MainActivityListenerImpl implements MainActivityListener {
         SettingsApp.setUserId("", sharedPreferences);
         SettingsApp.setUserName("", sharedPreferences);
         SettingsApp.setUserAvatar("", sharedPreferences);
+
+        SettingsApp.setGreeting(true, sharedPreferences);
         mActivityView.logOut();
     }
 

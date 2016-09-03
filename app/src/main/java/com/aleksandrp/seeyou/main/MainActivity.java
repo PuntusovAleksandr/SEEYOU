@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.aleksandrp.seeyou.R;
 import com.aleksandrp.seeyou.about_app.AboutActivity;
@@ -59,12 +60,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private SharedPreferences sharedPreferences;
 
+    private RelativeLayout showAll, noShowAll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         checkSave();
         setContentView(R.layout.activity_main);
+
+        showAll = (RelativeLayout) findViewById(R.id.rl_show_all);
+        noShowAll = (RelativeLayout) findViewById(R.id.rl_no_show_all);
+
+        findViewById(R.id.bt_go).setOnClickListener(this);
+
+        if (SettingsApp.getGreeting(sharedPreferences)) {
+
+        } else {
+            showAllViews();
+        }
+    }
+
+    private void showAllViews() {
+
+        showAll.setVisibility(View.GONE);
+        noShowAll.setVisibility(View.VISIBLE);
 
         mActivityListener = new MainActivityListenerImpl();
 
@@ -142,6 +161,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View mView) {
         UtilsApp.disableDoubleClick(mView);
         switch (mView.getId()) {
+            case R.id.bt_go:
+                SettingsApp.setGreeting(false, sharedPreferences);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        showAllViews();
+                    }
+                });
+                break;
+
             case R.id.icon_search:
                 break;
 
