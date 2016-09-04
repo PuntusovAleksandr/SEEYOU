@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_horizontal_margin"
     android:background="@drawable/bc"
     tools:context="com.aleksandrp.seeyou.profile.ProfileActivity">
 
@@ -70,10 +71,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/iv_user_Profile"
-                    android:layout_width="160dp"
-                    android:layout_height="200dp"
-                    android:src="@drawable/user"/>
+                android:id="@+id/iv_user_Profile"
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:src="@drawable/user"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -86,9 +87,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="@dimen/midl_size"
                         android:layout_weight="1.7"
-                        android:gravity="center_vertical|end"
-                        android:text="@string/name"
-                        android:textColor="@android:color/black"/>
+                        android:gravity="center_vertical"
+                        android:hint="@string/name"/>
 
                     <EditText
                         android:id="@+id/et_name_profile"
@@ -96,8 +96,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:enabled="false"
+                        android:fontFamily="ARIMO-BOLD.ttf"
+                        android:gravity="center_vertical"
                         android:hint="@string/name"
-                        android:textColor="@android:color/black"/>
+                        android:textColor="@color/color_text_title"
+                        android:textSize="@dimen/x_7"/>
 
                 </LinearLayout>
 
@@ -112,9 +115,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="@dimen/midl_size"
                         android:layout_weight="1.7"
-                        android:gravity="center_vertical|end"
-                        android:text="@string/surname"
-                        android:textColor="@android:color/black"/>
+                        android:gravity="center_vertical"
+                        android:hint="@string/surname"/>
 
                     <EditText
                         android:id="@+id/et_surname_profile"
@@ -122,8 +124,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:enabled="false"
+                        android:fontFamily="ARIMO-BOLD.ttf"
+                        android:gravity="center_vertical"
                         android:hint="@string/surname"
-                        android:textColor="@android:color/black"/>
+                        android:textColor="@color/color_text_title"
+                        android:textSize="@dimen/x_7"/>
 
                 </LinearLayout>
 
@@ -138,9 +143,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="@dimen/midl_size"
                         android:layout_weight="1.7"
-                        android:gravity="center_vertical|end"
-                        android:text="@string/email"
-                        android:textColor="@android:color/black"/>
+                        android:gravity="center_vertical"
+                        android:hint="@string/email"/>
 
                     <TextView
                         android:id="@+id/tv_email_profile"
@@ -148,9 +152,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:enabled="false"
+                        android:fontFamily="ARIMO-BOLD.ttf"
                         android:gravity="center_vertical"
                         android:hint="@string/email"
-                        android:textColor="@android:color/black"/>
+                        android:textColor="@color/color_text_title"
+                        android:textSize="@dimen/x_7"/>
 
                 </LinearLayout>
 
@@ -165,22 +171,44 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="@dimen/midl_size"
                         android:layout_weight="1.7"
-                        android:gravity="center_vertical|end"
-                        android:text="@string/date"
-                        android:textColor="@android:color/black"/>
+                        android:gravity="center_vertical"
+                        android:hint="@string/date"/>
 
-                    <TextView
-                        android:id="@+id/tv_date_profile"
+                    <RelativeLayout
+                        android:id="@+id/ll_select_date"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/midl_size"
                         android:layout_marginTop="@dimen/midl_size"
                         android:layout_weight="1"
-                        android:background="@drawable/round"
                         android:enabled="false"
-                        android:gravity="center"
-                        android:hint="@string/select_date"
-                        android:textColor="@android:color/black"/>
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/tv_date_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/midl_size"
+                            android:layout_marginTop="@dimen/midl_size"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:fontFamily="ARIMO-BOLD.ttf"
+                            android:gravity="center_vertical"
+                            android:hint="@string/select_date"
+                            android:textColor="@color/color_text_title"
+                            android:textSize="@dimen/x_7"/>
+
+                        <ImageView
+                            android:id="@+id/iv_select_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:src="@drawable/down"/>
+
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -195,9 +223,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="@dimen/midl_size"
                         android:layout_weight="1.7"
-                        android:gravity="center_vertical|end"
-                        android:text="@string/country"
-                        android:textColor="@android:color/black"/>
+                        android:gravity="center_vertical"
+                        android:hint="@string/country"/>
 
                     <RelativeLayout
                         android:id="@+id/ll_select_country"
@@ -206,7 +233,6 @@
                         android:layout_marginBottom="@dimen/midl_size"
                         android:layout_marginTop="@dimen/midl_size"
                         android:layout_weight="1"
-                        android:background="@drawable/round"
                         android:enabled="false"
                         android:orientation="horizontal">
 
@@ -217,13 +243,15 @@
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
                             android:layout_marginBottom="@dimen/midl_size"
-                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
                             android:layout_marginTop="@dimen/midl_size"
-                            android:gravity="center"
+                            android:fontFamily="ARIMO-BOLD.ttf"
+                            android:gravity="center_vertical"
                             android:hint="@string/select_country"
-                            android:textColor="@android:color/black"/>
+                            android:textColor="@color/color_text_title"
+                            android:textSize="@dimen/x_7"/>
 
                         <ImageView
+                            android:id="@+id/iv_select_country"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
@@ -246,9 +274,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="@dimen/midl_size"
                         android:layout_weight="1.7"
-                        android:gravity="center_vertical|end"
-                        android:text="@string/city"
-                        android:textColor="@android:color/black"/>
+                        android:gravity="center_vertical"
+                        android:hint="@string/city"/>
 
 
                     <RelativeLayout
@@ -258,7 +285,6 @@
                         android:layout_marginBottom="@dimen/midl_size"
                         android:layout_marginTop="@dimen/midl_size"
                         android:layout_weight="1"
-                        android:background="@drawable/round"
                         android:enabled="false"
                         android:orientation="horizontal">
 
@@ -269,13 +295,15 @@
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
                             android:layout_marginBottom="@dimen/midl_size"
-                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
                             android:layout_marginTop="@dimen/midl_size"
-                            android:gravity="center"
+                            android:fontFamily="ARIMO-BOLD.ttf"
+                            android:gravity="center_vertical"
                             android:hint="@string/select_city"
-                            android:textColor="@android:color/black"/>
+                            android:textColor="@color/color_text_title"
+                            android:textSize="@dimen/x_7"/>
 
                         <ImageView
+                            android:id="@+id/iv_select_sity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
@@ -298,9 +326,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="@dimen/midl_size"
                         android:layout_weight="1.7"
-                        android:gravity="center_vertical|end"
-                        android:text="@string/sex"
-                        android:textColor="@android:color/black"/>
+                        android:gravity="center_vertical"
+                        android:hint="@string/sex"/>
 
 
                     <LinearLayout
@@ -336,7 +363,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -346,9 +374,11 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="@dimen/midl_size"
                         android:layout_weight="1"
-                        android:background="@drawable/button_signin_bg"
+                        android:background="@drawable/smbbut_normal"
+                        android:fontFamily="ARIMO-BOLD.ttf"
                         android:text="@string/edit"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/x_7"/>
 
                     <Button
                         android:id="@+id/bt_cancel"
@@ -356,9 +386,12 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="@dimen/midl_size"
                         android:layout_weight="1"
-                        android:background="@drawable/button_signin_bg"
+                        android:background="@drawable/smbbut_normal"
+                        android:fontFamily="ARIMO-BOLD.ttf"
                         android:text="@string/cancel"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/x_7"
+                        android:visibility="gone"/>
 
                 </LinearLayout>
 

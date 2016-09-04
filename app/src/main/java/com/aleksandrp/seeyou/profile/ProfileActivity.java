@@ -29,13 +29,13 @@ import java.util.ArrayList;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener,
         ProfileActivityView, DialogSelectCountry.OnInteractionListener,
-        DialogDate.DialogDateListener{
+        DialogDate.DialogDateListener {
 
     private ProfileActivityListener mListener;
 
     private ProgressBar mProgressBar;
-    private Button btEdit;
-    private ImageView ivIconUser;
+    private Button btEdit, btCancel;
+    private ImageView ivIconUser, ivSelectDate, ivSelectCountry, ivSelectSity;
     private TextView tvDate, tvCounry, tvCity, tvMail;
     private CheckBox cbMan, cbWoman;
     private EditText etName, etSurname;
@@ -54,6 +54,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         mProgressBar = (ProgressBar) findViewById(R.id.progress_profile);
         btEdit = (Button) findViewById(R.id.bt_edit_profile);
         btEdit.setOnClickListener(this);        // bt edit
+
+        ivSelectDate = (ImageView) findViewById(R.id.iv_select_data);
+        ivSelectCountry = (ImageView) findViewById(R.id.iv_select_country);
+        ivSelectSity = (ImageView) findViewById(R.id.iv_select_sity);
 
         ivIconUser = (ImageView) findViewById(R.id.iv_user_Profile);
         ivIconUser.setOnClickListener(this);        // select icon
@@ -81,7 +85,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         rlCountry.setOnClickListener(this);         // select city
 
         findViewById(R.id.rl_back_profile).setOnClickListener(this);        // back
-        findViewById(R.id.bt_cancel).setOnClickListener(this);              // bt cancel
+        btCancel = (Button) findViewById(R.id.bt_cancel);                   // bt cancel
+        btCancel.setOnClickListener(this);
 
         disableAllViews();
 
@@ -185,6 +190,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void setEnableAll() {
         if (btEdit.getText().toString().equals(getResources().getText(R.string.ok))) {
+            btCancel.setVisibility(View.GONE);
             disableAllViews();
             String sex = STATICS_PARAMS.SEX_MAN;
             if (cbWoman.isChecked()) {
@@ -210,6 +216,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void enableAllViews() {
+        btCancel.setVisibility(View.VISIBLE);
+
         btEdit.setText(getResources().getText(R.string.ok));
 
         ivIconUser.setEnabled(true);
@@ -222,9 +230,16 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         etSurname.setEnabled(true);
         rlCountry.setEnabled(true);
         rlCity.setEnabled(true);
+
+        ivSelectDate.setVisibility(View.VISIBLE);
+        ivSelectCountry.setVisibility(View.VISIBLE);
+        ivSelectSity.setVisibility(View.VISIBLE);
     }
 
     private void disableAllViews() {
+
+        btCancel.setVisibility(View.GONE);
+
         btEdit.setText(getResources().getText(R.string.edit));
 
         ivIconUser.setEnabled(false);
@@ -237,6 +252,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         etSurname.setEnabled(false);
         rlCountry.setEnabled(false);
         rlCity.setEnabled(false);
+
+        ivSelectDate.setVisibility(View.INVISIBLE);
+        ivSelectCountry.setVisibility(View.INVISIBLE);
+        ivSelectSity.setVisibility(View.INVISIBLE);
     }
 
 
@@ -245,9 +264,13 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     private void setDataInUi(UserProfile mUserProfile) {
         pathToImage = mUserProfile.getPathIcon();
-        Picasso.with(ProfileActivity.this)
-                .load(mUserProfile.getPathIcon())
-                .into(ivIconUser);
+//        if (pathToImage != null && !pathToImage.isEmpty()) {
+//            Picasso.with(ProfileActivity.this)
+//                    .load(pathToImage)
+//                    .into(ivIconUser);
+//        } else {
+        ivIconUser.setImageResource(R.drawable.user);
+//        }
         etName.setText(mUserProfile.getName());
         etSurname.setText(mUserProfile.getSurName());
         tvMail.setText(mUserProfile.getE_mail());
