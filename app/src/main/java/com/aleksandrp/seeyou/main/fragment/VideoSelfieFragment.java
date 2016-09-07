@@ -65,13 +65,13 @@ public class VideoSelfieFragment extends Fragment implements
         mRecyclerViewSeeYouChoise = (RecyclerView) view.findViewById(R.id.recycler_view_selfi_seeyou_choise);
 
         LinearLayoutManager linearLayoutManagerNew = new LinearLayoutManager(getActivity(),
-                LinearLayoutManager.HORIZONTAL, false);
+                LinearLayoutManager.VERTICAL, false);
 
         LinearLayoutManager linearLayoutManagerPopular = new LinearLayoutManager(getActivity(),
-                LinearLayoutManager.HORIZONTAL, false);
+                LinearLayoutManager.VERTICAL, false);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),
-                LinearLayoutManager.HORIZONTAL, false);
+                LinearLayoutManager.VERTICAL, false);
 
         mRecyclerViewNewVideo.setLayoutManager(linearLayoutManagerNew);
         mRecyclerViewMostPopularo.setLayoutManager(linearLayoutManagerPopular);
@@ -132,7 +132,11 @@ public class VideoSelfieFragment extends Fragment implements
      * @param mSEEYOU
      */
     public void notifyListNewAdapter(List<VideoSEEYOU> mSEEYOU) {
-        mNewVideo = mSEEYOU;
+        // TODO: 07.09.2016 надобудет сделать норм спивсок
+        for (int i = 0; i < 5; i++) {
+            mNewVideo.add(mSEEYOU.get(i));
+        }
+//        mNewVideo = mSEEYOU;
         updateList();
     }
 
@@ -142,7 +146,11 @@ public class VideoSelfieFragment extends Fragment implements
      * @param mSEEYOU
      */
     public void notifyListPopularAdapter(List<VideoSEEYOU> mSEEYOU) {
-        mPopular = mSEEYOU;
+        // TODO: 07.09.2016 надобудет сделать норм спивсок
+        for (int i = 0; i < 5; i++) {
+            mPopular.add(mSEEYOU.get(i));
+        }
+//        mPopular = mSEEYOU;
         updateList();
     }
 
@@ -152,7 +160,11 @@ public class VideoSelfieFragment extends Fragment implements
      * @param mSEEYOU
      */
     public void notifyListSeeYouAdapter(List<VideoSEEYOU> mSEEYOU) {
-        mSeeYouShoise = mSEEYOU;
+        // TODO: 07.09.2016 надобудет сделать норм спивсок
+        for (int i = 0; i < 5; i++) {
+            mSeeYouShoise.add(mSEEYOU.get(i));
+        }
+//        mSeeYouShoise = mSEEYOU;
         updateList();
     }
 
@@ -168,7 +180,11 @@ public class VideoSelfieFragment extends Fragment implements
         if (mNewVideo != null) {
             mNewVideo.clear();
         }
-        this.mNewVideo = mSEEYOU;
+        // TODO: 07.09.2016 надобудет сделать норм спивсок
+        for (int i = 0; i < 5; i++) {
+            mNewVideo.add(mSEEYOU.get(i));
+        }
+//        this.mNewVideo = mSEEYOU;
         updateList();
     }
 
@@ -177,16 +193,24 @@ public class VideoSelfieFragment extends Fragment implements
         if (mPopular != null) {
             mPopular.clear();
         }
-        this.mPopular = mSEEYOU;
+        // TODO: 07.09.2016 надобудет сделать норм спивсок
+        for (int i = 0; i < 5; i++) {
+            mPopular.add(mSEEYOU.get(i));
+        }
+//        this.mPopular = mSEEYOU;
         updateList();
     }
 
     @Override
     public void getSeeYouVideo(boolean firstSStart, List<VideoSEEYOU> mSEEYOU) {
-        if (mNewVideo != null) {
+        if (mSeeYouShoise != null) {
             mSeeYouShoise.clear();
         }
-        this.mSeeYouShoise = mSEEYOU;
+        // TODO: 07.09.2016 надобудет сделать норм спивсок
+        for (int i = 0; i < 5; i++) {
+            mSeeYouShoise.add(mSEEYOU.get(i));
+        }
+//        this.mSeeYouShoise = mSEEYOU;
         updateList();
         if (firstSStart) {
             playRandomSeeYouChoisVideo(mSEEYOU);

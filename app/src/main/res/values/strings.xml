@@ -648,4 +648,7 @@
     <string name="welcome">WELCOME!</string>
     <string name="you_have_registered_on_seeyou_space">You have registered on SEEYOU space.</string>
     <string name="go">GO!</string>
+    <string name="new_videos">NEW VIDEOS</string>
+    <string name="most_popular">MOST POPULAR</string>
+    <string name="seeyou_choice">SEEYOU CHOICE</string>
 </resources>

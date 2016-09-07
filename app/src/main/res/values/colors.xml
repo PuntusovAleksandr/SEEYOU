@@ -16,6 +16,8 @@
     <color name="color_green">#70ff27</color>
     <color name="color_red">#ff2727</color>
 
+    <color name="bacground_video">#3b3e37</color>
+
 
     <color name="color_text_title">#555555</color>
 </resources>

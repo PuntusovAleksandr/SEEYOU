@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_main"
+    android:background="@drawable/bc"
     android:orientation="vertical"
     tools:context="com.aleksandrp.seeyou.main.fragment.VideoSelfieFragment">
 
@@ -19,12 +19,12 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-
             <VideoView
                 android:id="@+id/video_view"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:background="@color/bacground_video"/>
 
 
             <LinearLayout
@@ -35,18 +35,50 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:gravity="center"
-                    android:text="NEW VIDEOS"
-                    android:textColor="@color/dark"
-                    android:textSize="@dimen/midle_size_text"/>
+                    android:text="@string/new_videos"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/x_8"/>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_view_selfi_new_video"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_horizontal_margin"
                     android:layout_weight="1"/>
+
+                <RelativeLayout
+                    android:id="@+id/bt_show_more_new_videos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/show_but_normal"
+                    android:gravity="center"
+                    android:text="SHOW MORE"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/x_7">
+
+                    <TextView
+                        android:id="@+id/tv_show1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="ARIMO-BOLD.ttf"
+                        android:text="SHOW MORE"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/x_5"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_show1"
+                        android:gravity="center"
+                        android:src="@drawable/show_down"/>
+
+                </RelativeLayout>
 
             </LinearLayout>
 
@@ -58,18 +90,50 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:gravity="center"
-                    android:text="MOST POPULAR"
-                    android:textColor="@color/dark"
-                    android:textSize="@dimen/midle_size_text"/>
+                    android:text="@string/most_popular"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/x_8"/>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_view_selfi_most_popular"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_horizontal_margin"
                     android:layout_weight="1"/>
+
+                <RelativeLayout
+                    android:id="@+id/bt_show_more_new_videos2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/show_but_normal"
+                    android:gravity="center"
+                    android:text="SHOW MORE"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/x_7">
+
+                    <TextView
+                        android:id="@+id/tv_show2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="ARIMO-BOLD.ttf"
+                        android:text="SHOW MORE"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/x_5"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_show2"
+                        android:gravity="center"
+                        android:src="@drawable/show_down"/>
+
+                </RelativeLayout>
 
             </LinearLayout>
 
@@ -81,18 +145,50 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="ARIMO-BOLD.ttf"
                     android:gravity="center"
-                    android:text="SEEYOU CHOICE"
-                    android:textColor="@color/dark"
-                    android:textSize="@dimen/midle_size_text"/>
+                    android:text="@string/seeyou_choice"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/x_8"/>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_view_selfi_seeyou_choise"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_horizontal_margin"
                     android:layout_weight="1"/>
+
+                <RelativeLayout
+                    android:id="@+id/bt_show_more_new_videos3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/show_but_normal"
+                    android:gravity="center"
+                    android:text="SHOW MORE"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/x_7">
+
+                    <TextView
+                        android:id="@+id/tv_show3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="ARIMO-BOLD.ttf"
+                        android:text="SHOW MORE"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/x_5"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_show3"
+                        android:gravity="center"
+                        android:src="@drawable/show_down"/>
+
+                </RelativeLayout>
 
             </LinearLayout>
 

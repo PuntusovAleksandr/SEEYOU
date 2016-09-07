@@ -28,7 +28,7 @@
             android:layout_width="?attr/actionBarSize"
             android:layout_height="?attr/actionBarSize"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/icon_load"
+            android:layout_toLeftOf="@+id/icon_user_ll"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_search"/>
 
@@ -38,7 +38,7 @@
             android:layout_width="?attr/actionBarSize"
             android:layout_height="?attr/actionBarSize"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/icon_user_ll"
+            android:layout_toLeftOf="@+id/icon_search"
             android:background="@android:color/transparent"
             android:src="@drawable/add_file"/>
 
@@ -128,7 +128,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    android:background="@color/light_green"
+                    android:background="@android:color/transparent"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -136,6 +136,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="8"
+                        android:visibility="gone"
                         android:padding="@dimen/small_margin"
                         android:src="@drawable/ic_list_black"/>
 
@@ -144,10 +145,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        app:tabBackground="@color/light_green"
-                        app:tabIndicatorColor="@color/color_bg_green"
-                        app:tabSelectedTextColor="@color/color_bg_green"
-                        app:tabTextColor="@android:color/black"/>
+                        app:tabBackground="@android:color/transparent"
+                        app:tabIndicatorColor="@android:color/transparent"
+                        app:tabSelectedTextColor="@color/bg_main"
+                        app:tabTextColor="@color/color_bg_green"/>
 
                 </LinearLayout>
 
