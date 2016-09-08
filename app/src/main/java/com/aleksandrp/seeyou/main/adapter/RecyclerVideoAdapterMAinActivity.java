@@ -61,7 +61,7 @@ public class RecyclerVideoAdapterMAinActivity extends
         final VideoSEEYOU video = listItems.get(position);
 
         holder.title.setText(video.getTitle());
-        holder.duration.setText("");
+        holder.duration.setText("00:00");
         holder.author.setText(video.getAuthor_name());
         holder.views.setText(video.getViews());
         Picasso.with(context)

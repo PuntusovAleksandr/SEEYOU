@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.MediaController;
+import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
 import com.aleksandrp.seeyou.R;
@@ -19,18 +20,21 @@ import com.aleksandrp.seeyou.retrofit.AllRequest;
 import com.aleksandrp.seeyou.retrofit.entity.VideoSEEYOU;
 import com.aleksandrp.seeyou.retrofit.impl.AllRequestImpl;
 import com.aleksandrp.seeyou.utils_app.STATICS_PARAMS;
+import com.aleksandrp.seeyou.utils_app.UtilsApp;
 import com.aleksandrp.seeyou.video_activity.VideoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class VideoSelfieFragment extends Fragment implements
+public class VideoSelfieFragment extends Fragment implements View.OnClickListener,
         AllRequestImpl.GetNewPopularSeeYouVideos,
         RecyclerVideoAdapterMAinActivity.PlayVideoSelfi {
 
 
     private RecyclerView mRecyclerViewNewVideo, mRecyclerViewMostPopularo, mRecyclerViewSeeYouChoise;
+    private RelativeLayout mButtonNew, mButtonPopular, mButtonChoise;
+    private boolean mButtonNewPress = false, mButtonPopularPress = false, mButtonChoisePress = false;
 
     private static VideoSelfieFragment fragment;
     private VideoView player;
@@ -64,6 +68,10 @@ public class VideoSelfieFragment extends Fragment implements
         mRecyclerViewMostPopularo = (RecyclerView) view.findViewById(R.id.recycler_view_selfi_most_popular);
         mRecyclerViewSeeYouChoise = (RecyclerView) view.findViewById(R.id.recycler_view_selfi_seeyou_choise);
 
+        mButtonNew = (RelativeLayout) view.findViewById(R.id.bt_show_more_new_videos);
+        mButtonPopular = (RelativeLayout) view.findViewById(R.id.bt_show_more_new_videos2);
+        mButtonChoise = (RelativeLayout) view.findViewById(R.id.bt_show_more_new_videos3);
+
         LinearLayoutManager linearLayoutManagerNew = new LinearLayoutManager(getActivity(),
                 LinearLayoutManager.VERTICAL, false);
 
@@ -79,6 +87,10 @@ public class VideoSelfieFragment extends Fragment implements
         mRecyclerViewNewVideo.setHasFixedSize(true);
         mRecyclerViewMostPopularo.setHasFixedSize(true);
         mRecyclerViewSeeYouChoise.setHasFixedSize(true);
+
+        mButtonNew.setOnClickListener(this);
+        mButtonPopular.setOnClickListener(this);
+        mButtonChoise.setOnClickListener(this);
 
         mNewVideo = new ArrayList<>();
         mPopular = new ArrayList<>();
@@ -133,10 +145,13 @@ public class VideoSelfieFragment extends Fragment implements
      */
     public void notifyListNewAdapter(List<VideoSEEYOU> mSEEYOU) {
         // TODO: 07.09.2016 надобудет сделать норм спивсок
-        for (int i = 0; i < 5; i++) {
-            mNewVideo.add(mSEEYOU.get(i));
+        if (mButtonNewPress) {
+            mNewVideo = mSEEYOU;
+        } else {
+            for (int i = 0; i < 5; i++) {
+                mNewVideo.add(mSEEYOU.get(i));
+            }
         }
-//        mNewVideo = mSEEYOU;
         updateList();
     }
 
@@ -147,10 +162,13 @@ public class VideoSelfieFragment extends Fragment implements
      */
     public void notifyListPopularAdapter(List<VideoSEEYOU> mSEEYOU) {
         // TODO: 07.09.2016 надобудет сделать норм спивсок
-        for (int i = 0; i < 5; i++) {
-            mPopular.add(mSEEYOU.get(i));
+        if (mButtonPopularPress) {
+            mPopular = mSEEYOU;
+        } else {
+            for (int i = 0; i < 5; i++) {
+                mPopular.add(mSEEYOU.get(i));
+            }
         }
-//        mPopular = mSEEYOU;
         updateList();
     }
 
@@ -161,10 +179,13 @@ public class VideoSelfieFragment extends Fragment implements
      */
     public void notifyListSeeYouAdapter(List<VideoSEEYOU> mSEEYOU) {
         // TODO: 07.09.2016 надобудет сделать норм спивсок
-        for (int i = 0; i < 5; i++) {
-            mSeeYouShoise.add(mSEEYOU.get(i));
+        if (mButtonChoisePress) {
+            mSeeYouShoise = mSEEYOU;
+        } else {
+            for (int i = 0; i < 5; i++) {
+                mSeeYouShoise.add(mSEEYOU.get(i));
+            }
         }
-//        mSeeYouShoise = mSEEYOU;
         updateList();
     }
 
@@ -181,10 +202,13 @@ public class VideoSelfieFragment extends Fragment implements
             mNewVideo.clear();
         }
         // TODO: 07.09.2016 надобудет сделать норм спивсок
-        for (int i = 0; i < 5; i++) {
-            mNewVideo.add(mSEEYOU.get(i));
+        if (mButtonNewPress) {
+            mNewVideo = mSEEYOU;
+        } else {
+            for (int i = 0; i < 5; i++) {
+                mNewVideo.add(mSEEYOU.get(i));
+            }
         }
-//        this.mNewVideo = mSEEYOU;
         updateList();
     }
 
@@ -194,10 +218,13 @@ public class VideoSelfieFragment extends Fragment implements
             mPopular.clear();
         }
         // TODO: 07.09.2016 надобудет сделать норм спивсок
-        for (int i = 0; i < 5; i++) {
-            mPopular.add(mSEEYOU.get(i));
+        if (mButtonPopularPress) {
+            mPopular = mSEEYOU;
+        } else {
+            for (int i = 0; i < 5; i++) {
+                mPopular.add(mSEEYOU.get(i));
+            }
         }
-//        this.mPopular = mSEEYOU;
         updateList();
     }
 
@@ -207,10 +234,13 @@ public class VideoSelfieFragment extends Fragment implements
             mSeeYouShoise.clear();
         }
         // TODO: 07.09.2016 надобудет сделать норм спивсок
-        for (int i = 0; i < 5; i++) {
-            mSeeYouShoise.add(mSEEYOU.get(i));
+        if (mButtonChoisePress) {
+            mSeeYouShoise = mSEEYOU;
+        } else {
+            for (int i = 0; i < 5; i++) {
+                mSeeYouShoise.add(mSEEYOU.get(i));
+            }
         }
-//        this.mSeeYouShoise = mSEEYOU;
         updateList();
         if (firstSStart) {
             playRandomSeeYouChoisVideo(mSEEYOU);
@@ -219,7 +249,7 @@ public class VideoSelfieFragment extends Fragment implements
 
     private void playRandomSeeYouChoisVideo(List<VideoSEEYOU> mSEEYOU) {
         int random = new Random().nextInt(mSEEYOU.size());      // create random int for play video
-        String video_src =(mSEEYOU.get(random).getVideo_src());
+        String video_src = (mSEEYOU.get(random).getVideo_src());
         player.setVideoURI(Uri.parse("http://seeyou.media/" + video_src));
         player.start();
     }
@@ -233,6 +263,37 @@ public class VideoSelfieFragment extends Fragment implements
         intent.putExtra(STATICS_PARAMS.KEY_ID_VIDEO, id);
         intent.putExtra(STATICS_PARAMS.KEY_FROM_VIDEO, STATICS_PARAMS.TAG_SELFI_FRAGMENT);
         getActivity().startActivity(intent);
+    }
+
+    @Override
+    public void onClick(View mView) {
+        UtilsApp.disableDoubleClick(mView);
+        switch (mView.getId()) {
+            case R.id.bt_show_more_new_videos:
+                if (mButtonNewPress) {
+                    mButtonNewPress = false;
+                } else {
+                    mButtonNewPress = true;
+                }
+                break;
+
+            case R.id.bt_show_more_new_videos2:
+                if (mButtonPopularPress) {
+                    mButtonPopularPress = false;
+                } else {
+                    mButtonPopularPress = true;
+                }
+                break;
+
+            case R.id.bt_show_more_new_videos3:
+                if (mButtonChoisePress) {
+                    mButtonChoisePress = false;
+                } else {
+                    mButtonChoisePress = true;
+                }
+                break;
+        }
+        loadListVideos();
     }
 
 //   ==================================================================
