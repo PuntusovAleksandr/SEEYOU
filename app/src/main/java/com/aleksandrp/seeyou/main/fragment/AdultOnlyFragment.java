@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.RelativeLayout;
 
 import com.aleksandrp.seeyou.R;
 import com.aleksandrp.seeyou.main.adapter.RecyclerVideoAdapter;
@@ -48,7 +48,7 @@ public class AdultOnlyFragment extends Fragment {
          adult = SettingsApp.getAdult(getActivity().
                 getSharedPreferences(SettingsApp.FILE_NAME, Context.MODE_PRIVATE));
         if (!adult) {
-            TextView textReg = (TextView) view.findViewById(R.id.tv_need_register);
+            RelativeLayout textReg = (RelativeLayout) view.findViewById(R.id.tv_need_register);
             textReg.setVisibility(View.VISIBLE);
         }
 

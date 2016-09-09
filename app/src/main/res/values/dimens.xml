@@ -15,6 +15,7 @@
     <dimen name="size_liks">22sp</dimen>
     <dimen name="size_fragment">480dp</dimen>
     <dimen name="x_45">45sp</dimen>
+    <dimen name="x_10">38sp</dimen>
     <dimen name="x_9">34sp</dimen>
     <dimen name="x_8">24sp</dimen>
     <dimen name="x_7">20sp</dimen>

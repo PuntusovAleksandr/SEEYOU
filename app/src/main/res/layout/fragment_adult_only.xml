@@ -6,26 +6,258 @@
     android:background="@drawable/bc"
     tools:context=".main.fragment.AdultOnlyFragment">
 
-    <android.support.v7.widget.RecyclerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/recycler_view_adult"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:gravity="center"
+            android:text="ADULT ONLY \nONLINE BROADCASTS"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x_8"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_adult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:id="@+id/bt_show_more_new_videos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@drawable/show_but_normal"
+            android:gravity="center"
+            android:text="@string/show_more"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/x_7">
+
+            <TextView
+                android:id="@+id/tv_show1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="ARIMO-BOLD.ttf"
+                android:text="@string/show_more"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/x_5"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_show1"
+                android:gravity="center"
+                android:src="@drawable/show_down"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
-    <TextView
+    <RelativeLayout
         android:id="@+id/tv_need_register"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@color/transparent_blue"
-        android:gravity="center"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:text="@string/you_need_register_and_buy_service"
-        android:textColor="@color/white"
-        android:textSize="@dimen/big_size"
-        android:visibility="gone"/>
+        android:background="@android:color/black"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/v_center"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/for_verification_of_your_age_you_can_buy"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x_4"/>
+
+        <View
+            android:id="@+id/v_center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="?attr/actionBarSize"/>
+
+        <TextView
+            android:id="@+id/tv_18_years"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_center"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="48dp"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/_18_years_old"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x_8"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_18_years"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:gravity="center"
+            android:text="@string/to_view_the_videios"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x_7"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_center"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <LinearLayout
+                android:id="@+id/bt_7_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/stickers_buy"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="ARIMO-BOLD.ttf"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/_7"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/x_9"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="ARIMO-BOLD.ttf"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/days"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/x_7"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="ARIMO-BOLD.ttf"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/description"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/x_4"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                    android:fontFamily="ARIMO-BOLD.ttf"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/_9_00"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x_7"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bt_30_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:background="@drawable/stickers_buy"
+                android:clickable="true"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="ARIMO-BOLD.ttf"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/_30"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/x_9"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="ARIMO-BOLD.ttf"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/days"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/x_7"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="ARIMO-BOLD.ttf"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/description"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/x_4"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/com_facebook_auth_dialog_corner_radius_oversized"
+                    android:fontFamily="ARIMO-BOLD.ttf"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/_29_00"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x_7"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>
