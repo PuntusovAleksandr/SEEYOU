@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bc"
     tools:context=".main.fragment.AdultOnlyFragment">
 
     <android.support.v7.widget.RecyclerView
@@ -19,11 +20,11 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:textColor="@color/white"
-        android:background="@color/transparent_dark_green"
+        android:background="@color/transparent_blue"
         android:gravity="center"
         android:padding="@dimen/activity_horizontal_margin"
         android:text="@string/you_need_register_and_buy_service"
+        android:textColor="@color/white"
         android:textSize="@dimen/big_size"
         android:visibility="gone"/>
 
