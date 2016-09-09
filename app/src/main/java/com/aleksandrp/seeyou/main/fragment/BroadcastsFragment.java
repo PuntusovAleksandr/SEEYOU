@@ -13,11 +13,13 @@ import com.aleksandrp.seeyou.main.adapter.RecyclerVideoAdapterBroadcast;
 import com.aleksandrp.seeyou.retrofit.AllRequest;
 import com.aleksandrp.seeyou.retrofit.entity.Broadcast;
 import com.aleksandrp.seeyou.retrofit.impl.AllRequestImpl;
+import com.aleksandrp.seeyou.utils_app.UtilsApp;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BroadcastsFragment extends Fragment implements AllRequestImpl.GetBroadcastVideos {
+public class BroadcastsFragment extends Fragment implements AllRequestImpl.GetBroadcastVideos,
+        View.OnClickListener {
 
 
     private static BroadcastsFragment sFragment;
@@ -25,6 +27,7 @@ public class BroadcastsFragment extends Fragment implements AllRequestImpl.GetBr
     private List<Broadcast> mBroadcasts;
     private RecyclerVideoAdapterBroadcast sRecyclerViewAdapter;
 
+    private boolean mButtonNewPress = false;
 
     public static BroadcastsFragment gewInstance() {
         if (sFragment == null) {
@@ -39,6 +42,7 @@ public class BroadcastsFragment extends Fragment implements AllRequestImpl.GetBr
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_broadcasts, container, false);
+        view.findViewById(R.id.bt_show_more_new_videos).setOnClickListener(this);
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view_broadcasts);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity().
@@ -71,10 +75,18 @@ public class BroadcastsFragment extends Fragment implements AllRequestImpl.GetBr
     // answer from loader
     @Override
     public void loadVideo(List<Broadcast> mBroadcastses) {
+
         if (mBroadcasts != null) {
             mBroadcasts.clear();
         }
-        this.mBroadcasts = mBroadcastses;
+
+        if (mButtonNewPress) {
+            this.mBroadcasts = mBroadcastses;
+        } else {
+            for (int i = 0; i < 5; i++) {
+                mBroadcasts.add(mBroadcastses.get(i));
+            }
+        }
 
         if (sRecyclerViewAdapter != null) {
             sRecyclerViewAdapter = null;
@@ -89,6 +101,21 @@ public class BroadcastsFragment extends Fragment implements AllRequestImpl.GetBr
      */
     public void notifyListAdapterByCategory(List<Broadcast> mBroadcastses) {
         loadVideo(mBroadcastses);
+    }
+
+    @Override
+    public void onClick(View mView) {
+        UtilsApp.disableDoubleClick(mView);
+        switch (mView.getId()) {
+            case R.id.bt_show_more_new_videos:
+                if (mButtonNewPress) {
+                    mButtonNewPress = false;
+                } else {
+                    mButtonNewPress = true;
+                }
+                break;
+        }
+        loadBroadcastVideos();
     }
 
 
