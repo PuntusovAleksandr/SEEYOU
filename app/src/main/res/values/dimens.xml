@@ -19,6 +19,7 @@
     <dimen name="x_9">34sp</dimen>
     <dimen name="x_8">24sp</dimen>
     <dimen name="x_7">20sp</dimen>
+    <dimen name="x_6">18sp</dimen>
     <dimen name="x_5">16sp</dimen>
     <dimen name="x_4">14sp</dimen>
 </resources>

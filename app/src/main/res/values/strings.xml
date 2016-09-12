@@ -33,7 +33,7 @@
     <string name="places_trawel"><![CDATA[Places & Trawel]]></string>
     <string name="your_liked_videos">Your liked videos</string>
     <string name="upload_video">Upload video</string>
-    <string name="select_file_to_upload">Select file to upload</string>
+    <string name="select_file_to_upload">SELECT FILE</string>
     <string name="type_title_of_video">Type title of video</string>
     <string name="description_for_video">Description for video</string>
     <string name="video_category">Video category</string>
@@ -662,4 +662,6 @@
     <string name="_30">30</string>
     <string name="_29_00">29.00$</string>
     <string name="use_filter">USE FILTER</string>
+    <string name="rules_and_conditions">RULES AND CONDITIONS</string>
+    <string name="text_upload_video">ЗАГРУЗКА ВИДЕО\n \nЗагружая видео на SeeYou, вы принимаете Условия использованияи Конфиддициальности SeeYou.\n \n ПРАВИЛА И ОГРАНИЧЕНИЯ\n \nВидео не должно нарушать ничьих авторских прав и конфиденциальности других пользователей\n \nМаксимальная длинна роликов — 60 секунд. После загрузки вы можете вырезать нужную часть с вашего видео, если оно длиннее чем нужно\n \nМаксимальный размер загружаемого видео — 200Мб\n \nПоддерживаемые форматы видео — mp4, avi, ...</string>
 </resources>

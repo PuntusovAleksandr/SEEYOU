@@ -83,7 +83,7 @@ public class UploadActivity extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.ll_select_category).setOnClickListener(this);         // select category
         findViewById(R.id.bt_upload_video).setOnClickListener(this);            // bt upload
         findViewById(R.id.rl_back_upload).setOnClickListener(this);             // back
-        findViewById(R.id.icon_user).setOnClickListener(this);                  // image button in profile
+//        findViewById(R.id.icon_user).setOnClickListener(this);                  // image button in profile
         findViewById(R.id.bt_load).setOnClickListener(this);                    // bt add file
         findViewById(R.id.ll_main_profile_settings).setOnClickListener(this);
 
@@ -96,8 +96,8 @@ public class UploadActivity extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.et_sign_out).setOnClickListener(this);
         {
             // TODO: 11.07.2016 Сделано временно, т.к. пока нет функционала
-            View ivIcon = findViewById(R.id.layout_icon);
-            ivIcon.setVisibility(View.GONE);
+//            View ivIcon = findViewById(R.id.layout_icon);
+//            ivIcon.setVisibility(View.GONE);
         }
     }
 
