@@ -1,7 +1,6 @@
 package com.aleksandrp.seeyou.message.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +36,7 @@ public class RecyclerAdapterMessages extends
     }
 
     public class TimeViewHolder extends RecyclerView.ViewHolder {
-        CardView mCardView;
+        RelativeLayout mCardView;
         TextView tvCountMess, tvNameUser;
         ImageView ivIconUser, ivStatusOnline;
         RelativeLayout rlCountMessages;
@@ -45,7 +44,7 @@ public class RecyclerAdapterMessages extends
 
         TimeViewHolder(View itemView) {
             super(itemView);
-            mCardView = (CardView) itemView.findViewById(R.id.cv_item_message_user);
+            mCardView = (RelativeLayout) itemView.findViewById(R.id.cv_item_message_user);
             ivIconUser = (ImageView) itemView.findViewById(R.id.video_view_entity);
             ivStatusOnline = (ImageView) itemView.findViewById(R.id.iv_status_connect);
             tvCountMess = (TextView) itemView.findViewById(R.id.tv_count_message);

@@ -131,7 +131,6 @@
                 android:id="@+id/bt_7_days"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/stickers_buy"
                 android:clickable="true"
                 android:orientation="vertical">
@@ -196,7 +195,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:layout_weight="1"
                 android:background="@drawable/stickers_buy"
                 android:clickable="true"
                 android:orientation="vertical">

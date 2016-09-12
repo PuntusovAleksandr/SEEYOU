@@ -46,11 +46,54 @@
 
     </RelativeLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/sticks_type_list_new"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize"
         android:layout_weight="1"
-        android:scrollbars="none"/>
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:id="@+id/bt_show_more_new_videos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@drawable/show_but_normal"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="@string/show_more"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/x_7">
+
+            <TextView
+                android:id="@+id/tv_show1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="ARIMO-BOLD.ttf"
+                android:text="@string/use_filter"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/x_5"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_show1"
+                android:gravity="center"
+                android:src="@drawable/show_down"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/sticks_type_list_new"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/bt_show_more_new_videos"
+            android:layout_weight="1"
+            android:scrollbars="none"/>
+
+    </RelativeLayout>
+
 </FrameLayout>

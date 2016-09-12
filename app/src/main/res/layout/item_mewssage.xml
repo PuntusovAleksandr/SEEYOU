@@ -1,33 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:id="@+id/cv_item_message_user"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/cardview_default_elevation"
+    android:background="@android:color/transparent"
+    card_view:cardPreventCornerOverlap="false"
+    app:cardBackgroundColor="@android:color/transparent">
 
     <RelativeLayout
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center">
 
         <RelativeLayout
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:gravity="center">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/video_view_entity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/com_facebook_profile_picture_blank_portrait"/>
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/com_facebook_profile_picture_blank_portrait"
+                app:civ_border_color="@color/bg_main"
+                app:civ_border_width="2dp"/>
+
+            <!--<ImageView-->
+            <!--android:id="@+id/video_view_entity"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@drawable/com_facebook_profile_picture_blank_portrait"/>-->
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
-                android:layout_marginBottom="@dimen/midl_size"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/midl_size">
 
                 <RelativeLayout
@@ -52,6 +69,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="6dp"
                         android:gravity="center"
+                        android:visibility="gone"
                         android:src="@drawable/cycler_white"
                         android:text="0"/>
 
@@ -62,7 +80,7 @@
                     android:id="@+id/iv_status_connect"
                     android:layout_width="12dp"
                     android:layout_height="12dp"
-                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:src="@drawable/status_connect_green"/>
 
@@ -80,10 +98,11 @@
                 android:id="@+id/tv_name_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:gravity="center"/>
 
         </LinearLayout>
 
     </RelativeLayout>
 
-</android.support.v7.widget.CardView>
+</RelativeLayout>
