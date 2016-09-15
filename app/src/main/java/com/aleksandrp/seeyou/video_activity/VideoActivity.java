@@ -39,6 +39,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class VideoActivity extends AppCompatActivity implements View.OnClickListener,
         VideoActivityView, RecyclerVideoAdapterBroadcastVideoActivity.ClickVideo,
         FragmentVideos.ShowVideo,
@@ -50,8 +52,9 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
 
     private FragmentManager mFragmentManager;
 
-    private ImageView ivSmallIcon, ivBigIcon;
-    private ImageButton ibOpenDetails, ibOpenComments;
+    private CircleImageView ivSmallIcon;
+    private ImageView ivBigIcon;
+    private ImageButton ibOpenComments;
     private TextView tvCategory, tvDataPublish, tvViews, tvLiks, tvDisLiks, tvName, tvAuthor;
     private View vVideos, vPeople, vAbout, vGames;
     private RecyclerView mRecyclerView;
@@ -59,7 +62,7 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
     private EditText textComment;
 
     private RelativeLayout rlDetailsVideo;
-    private LinearLayout llComments, llLike, llDisLike;
+    private LinearLayout llComments, llLike, llDisLike, ibOpenDetails;
 
     private FragmentVideos mVideos;
     private FragmentPeorle mPeorle;
@@ -126,7 +129,7 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
         mPlayer = (VideoView) findViewById(R.id.video_video_activity);
         mPlayer.setMediaController(new MediaController(VideoActivity.this));
 
-        ivSmallIcon = (ImageView) findViewById(R.id.iv_icon_author);
+        ivSmallIcon = (CircleImageView) findViewById(R.id.iv_icon_author);
         ivBigIcon = (ImageView) findViewById(R.id.icon_club_full);
 
         tvName = (TextView) findViewById(R.id.tv_name_video);
@@ -137,7 +140,7 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
         tvLiks = (TextView) findViewById(R.id.tv_show_like);
         tvDisLiks = (TextView) findViewById(R.id.tv_show_dislike);
 
-        ibOpenDetails = (ImageButton) findViewById(R.id.ib_show_details_video);
+        ibOpenDetails = (LinearLayout) findViewById(R.id.ib_show_details_video);
         ibOpenComments = (ImageButton) findViewById(R.id.ib_show_comments);
 
         ibOpenDetails.setOnClickListener(this);

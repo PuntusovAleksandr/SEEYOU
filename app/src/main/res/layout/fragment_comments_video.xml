@@ -1,29 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:background="@color/bacground_video">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="@dimen/_8"
+        android:layout_marginTop="@dimen/_8">
 
         <TextView
+            android:id="@+id/te_comments"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="?attr/actionBarSize"
             android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
             android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_8"
+            android:fontFamily="ARIMO-BOLD.ttf"
             android:text="@string/comments"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/big_size"/>
+            android:textColor="@color/white"
+            android:textSize="@dimen/x_8"/>
 
         <ImageButton
             android:id="@+id/ib_show_comments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ic_down"/>
+            android:src="@drawable/ic_down"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_name_video_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="ARIMO-BOLD.ttf"
+            android:gravity="center_vertical|start"
+            android:text="@string/your_comment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x_5"/>
+
 
     </RelativeLayout>
 
@@ -31,8 +54,8 @@
         android:id="@+id/ll_comments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <!--android:layout_height="@dimen/size_fragment"-->
 

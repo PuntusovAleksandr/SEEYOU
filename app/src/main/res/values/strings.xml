@@ -664,4 +664,7 @@
     <string name="use_filter">USE FILTER</string>
     <string name="rules_and_conditions">RULES AND CONDITIONS</string>
     <string name="text_upload_video">ЗАГРУЗКА ВИДЕО\n \nЗагружая видео на SeeYou, вы принимаете Условия использованияи Конфиддициальности SeeYou.\n \n ПРАВИЛА И ОГРАНИЧЕНИЯ\n \nВидео не должно нарушать ничьих авторских прав и конфиденциальности других пользователей\n \nМаксимальная длинна роликов — 60 секунд. После загрузки вы можете вырезать нужную часть с вашего видео, если оно длиннее чем нужно\n \nМаксимальный размер загружаемого видео — 200Мб\n \nПоддерживаемые форматы видео — mp4, avi, ...</string>
+    <string name="more">MORE</string>
+    <string name="online">Online</string>
+    <string name="your_comment">Your comment...</string>
 </resources>
